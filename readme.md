@@ -4,7 +4,7 @@ A secure, role-based student management portal built with PHP and MySQL (XAMPP).
 Students register, log in, and sign up for campus events. Administrators manage
 student records and events.
 
-**Author:** YOUR-NAME (ENROLLMENT-NO)
+**Author:** Patel Khushi(25CS065)
 **Repository:** https://github.com/25cs065-ux/STUDENTHUB
 
 ## Objective
