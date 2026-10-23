@@ -5,7 +5,7 @@ Students register, log in, and sign up for campus events. Administrators manage
 student records and events.
 
 **Author:** YOUR-NAME (ENROLLMENT-NO)
-**Repository:** https://github.com/YOUR-USERNAME/studenthub
+**Repository:** https://github.com/25cs065-ux/STUDENTHUB
 
 ## Objective
 
@@ -118,6 +118,6 @@ accessibility checklist. Quick manual test:
 - No email verification or password reset flow.
 - `readme` pages for attendance, results and notices are static HTML placeholders from earlier practicals.
 
-## Screenshots
+## Proofs
 
-Stored in the `screenshots/` folder (see the report for the numbered list).
+- A file is attached in the pdf format
