@@ -1,0 +1,18 @@
+[
+    {
+        "id": 1,
+        "name": "Khushi Patel",
+        "course": "Computer Engineering",
+        "semester": 2,
+        "department": "CSE",
+        "email": "khushi@example.com"
+    },
+    {
+        "id": 2,
+        "name": "Aarav Shah",
+        "course": "Computer Engineering",
+        "semester": 2,
+        "department": "CSE",
+        "email": "aarav@example.com"
+    }
+]

@@ -5,11 +5,160 @@
 
     <title>Student Profile - Student Hub</title>
 
+    <style>
+
+        /* =========================================
+           STUDENTHUB NAVIGATION
+        ========================================= */
+
+        #studentNavigation {
+            text-align: center;
+            padding: 15px;
+            border-bottom: 1px solid #ccc;
+        }
+
+        #menuButton,
+        #themeButton {
+            padding: 8px 12px;
+            margin: 5px;
+            cursor: pointer;
+            border: 1px solid #777;
+            background: white;
+        }
+
+        #navMenu {
+            margin-top: 12px;
+        }
+
+        #navMenu a {
+            margin: 8px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+
+        /* =========================================
+           DARK MODE
+        ========================================= */
+
+        body.darkMode {
+            background: #121212;
+            color: #f1f1f1;
+        }
+
+        body.darkMode a {
+            color: #8ab4f8;
+        }
+
+        body.darkMode #studentNavigation {
+            background: #1e1e1e;
+            border-color: #444;
+        }
+
+        body.darkMode #navMenu {
+            background: #1e1e1e;
+        }
+
+        body.darkMode table {
+            border-color: #666;
+        }
+
+        body.darkMode th,
+        body.darkMode td {
+            border-color: #666;
+        }
+
+    </style>
+
 </head>
+
 
 <body>
 
-    <!-- Header -->
+
+    <!-- =========================================
+         STUDENTHUB NAVIGATION
+    ========================================== -->
+
+    <div id="studentNavigation">
+
+        <button
+            id="menuButton"
+            aria-expanded="false"
+            aria-controls="navMenu">
+
+            ☰ Menu
+
+        </button>
+
+
+        <button
+            id="themeButton"
+            aria-label="Toggle dark and light mode">
+
+            🌙 Dark Mode
+
+        </button>
+
+
+        <nav id="navMenu" hidden>
+
+            <a href="Flexbox/home.html">
+                Home
+            </a>
+
+            <a href="aboutus.html">
+                About Us
+            </a>
+
+            <a href="dashboard.html">
+                Dashboard
+            </a>
+
+            <a href="attendance.html">
+                Attendance
+            </a>
+
+            <a href="result.html">
+                Results
+            </a>
+
+            <a href="timetable.html">
+                Timetable
+            </a>
+
+            <a href="assignment.html">
+                Assignments
+            </a>
+
+            <a href="studymaterial.html">
+                Study Material
+            </a>
+
+            <a href="notice.html">
+                Notices
+            </a>
+
+            <a href="profile.html">
+                Profile
+            </a>
+
+            <a href="changepass.html">
+                Change Password
+            </a>
+
+            <a href="contactus.html">
+                Contact Us
+            </a>
+
+        </nav>
+
+    </div>
+
+
+    <!-- =========================================
+         ORIGINAL HEADER
+    ========================================== -->
 
     <table width="100%">
 
@@ -17,13 +166,19 @@
 
             <td>
 
-                <img src="logo.png" width="120" alt="Student Hub Logo">
+                <img
+                    src="logo.png"
+                    width="120"
+                    alt="Student Hub Logo">
 
             </td>
 
+
             <td align="right">
 
-                <a href="home.html">Home</a>
+                <a href="Flexbox/home.html">
+                    Home
+                </a>
 
             </td>
 
@@ -31,7 +186,9 @@
 
     </table>
 
+
     <hr>
+
 
     <center>
 
@@ -39,13 +196,21 @@
 
         <p>
 
-            <b>View and manage your personal and academic information.</b>
+            <b>
+                View and manage your personal and academic information.
+            </b>
 
         </p>
 
     </center>
 
+
     <hr>
+
+
+    <!-- =========================================
+         PROFILE OVERVIEW
+    ========================================== -->
 
     <h2>Profile Overview</h2>
 
@@ -59,139 +224,209 @@
 
     </p>
 
+
     <hr>
+
+
+    <!-- =========================================
+         PERSONAL INFORMATION
+    ========================================== -->
 
     <h2>Personal Information</h2>
 
     <table border="1" cellpadding="10">
 
         <tr>
+
             <th>Field</th>
             <th>Information</th>
+
         </tr>
 
         <tr>
+
             <td>Student Name</td>
             <td>Khushi Patel</td>
+
         </tr>
 
         <tr>
+
             <td>Enrollment Number</td>
             <td>25CS065</td>
+
         </tr>
 
         <tr>
+
             <td>Gender</td>
             <td>Female</td>
+
         </tr>
 
         <tr>
+
             <td>Date of Birth</td>
             <td>20 January 2007</td>
+
         </tr>
 
         <tr>
+
             <td>Blood Group</td>
             <td>O+</td>
+
         </tr>
 
     </table>
 
+
     <hr>
+
+
+    <!-- =========================================
+         ACADEMIC INFORMATION
+    ========================================== -->
 
     <h2>Academic Information</h2>
 
     <table border="1" cellpadding="10">
 
         <tr>
+
             <th>Field</th>
             <th>Information</th>
+
         </tr>
 
         <tr>
+
             <td>Course</td>
             <td>Bachelor of Technology (B.Tech)</td>
+
         </tr>
 
         <tr>
+
             <td>Branch</td>
             <td>Computer Science Engineering</td>
+
         </tr>
 
         <tr>
+
             <td>Semester</td>
             <td>Second Semester</td>
+
         </tr>
 
         <tr>
+
             <td>Academic Year</td>
             <td>2026 - 2027</td>
+
         </tr>
 
         <tr>
+
             <td>Class</td>
             <td>CSE - A</td>
+
         </tr>
 
     </table>
 
+
     <hr>
+
+
+    <!-- =========================================
+         CONTACT INFORMATION
+    ========================================== -->
 
     <h2>Contact Information</h2>
 
     <table border="1" cellpadding="10">
 
         <tr>
+
             <th>Field</th>
             <th>Information</th>
+
         </tr>
 
         <tr>
+
             <td>Email Address</td>
             <td>student@example.com</td>
+
         </tr>
 
         <tr>
+
             <td>Mobile Number</td>
             <td>+91 9876543210</td>
+
         </tr>
 
         <tr>
+
             <td>Address</td>
             <td>Changa, Anand, Gujarat, India</td>
+
         </tr>
 
     </table>
 
+
     <hr>
+
+
+    <!-- =========================================
+         EMERGENCY CONTACT
+    ========================================== -->
 
     <h2>Emergency Contact</h2>
 
     <table border="1" cellpadding="10">
 
         <tr>
+
             <th>Field</th>
             <th>Information</th>
+
         </tr>
 
         <tr>
+
             <td>Guardian Name</td>
             <td>Alpesh Patel</td>
+
         </tr>
 
         <tr>
+
             <td>Relationship</td>
             <td>Father</td>
+
         </tr>
 
         <tr>
+
             <td>Guardian Contact</td>
             <td>+91 9876543211</td>
+
         </tr>
 
     </table>
 
+
     <hr>
+
+
+    <!-- =========================================
+         ACCOUNT STATUS
+    ========================================== -->
 
     <h2>Account Status</h2>
 
@@ -200,7 +435,6 @@
         <tr>
 
             <th>Information</th>
-
             <th>Status</th>
 
         </tr>
@@ -208,7 +442,6 @@
         <tr>
 
             <td>Student Account</td>
-
             <td>Active</td>
 
         </tr>
@@ -216,7 +449,6 @@
         <tr>
 
             <td>Library Membership</td>
-
             <td>Active</td>
 
         </tr>
@@ -224,7 +456,6 @@
         <tr>
 
             <td>Fee Status</td>
-
             <td>Paid</td>
 
         </tr>
@@ -232,50 +463,99 @@
         <tr>
 
             <td>Hostel Status</td>
-
             <td>Not Applicable</td>
 
         </tr>
 
     </table>
 
+
     <hr>
+
+
+    <!-- =========================================
+         ACADEMIC ACHIEVEMENTS
+    ========================================== -->
 
     <h2>Academic Achievements</h2>
 
     <ul>
 
-        <li>Successfully completed Semester 1.</li>
+        <li>
+            Successfully completed Semester 1.
+        </li>
 
-        <li>Maintaining good attendance throughout the semester.</li>
+        <li>
+            Maintaining good attendance throughout the semester.
+        </li>
 
-        <li>Active participation in college technical events.</li>
+        <li>
+            Active participation in college technical events.
+        </li>
 
-        <li>Regular submission of assignments.</li>
+        <li>
+            Regular submission of assignments.
+        </li>
 
     </ul>
 
+
     <hr>
+
+
+    <!-- =========================================
+         QUICK ACTIONS
+    ========================================== -->
 
     <h2>Quick Actions</h2>
 
     <ul>
 
-        <li><a href="attendance.html">View Attendance</a></li>
+        <li>
+            <a href="attendance.html">
+                View Attendance
+            </a>
+        </li>
 
-        <li><a href="result.html">Check Results</a></li>
+        <li>
+            <a href="result.html">
+                Check Results
+            </a>
+        </li>
 
-        <li><a href="assignment.html">View Assignments</a></li>
+        <li>
+            <a href="assignment.html">
+                View Assignments
+            </a>
+        </li>
 
-        <li><a href="timetable.html">View Timetable</a></li>
+        <li>
+            <a href="timetable.html">
+                View Timetable
+            </a>
+        </li>
 
-        <li><a href="notice.html">Latest Notices</a></li>
+        <li>
+            <a href="notice.html">
+                Latest Notices
+            </a>
+        </li>
 
-        <li><a href="changepass.html">Change Password</a></li>
+        <li>
+            <a href="changepass.html">
+                Change Password
+            </a>
+        </li>
 
     </ul>
 
+
     <hr>
+
+
+    <!-- =========================================
+         IMPORTANT NOTE
+    ========================================== -->
 
     <h2>Important Note</h2>
 
@@ -287,7 +567,13 @@
 
     </p>
 
+
     <hr>
+
+
+    <!-- =========================================
+         NEED HELP
+    ========================================== -->
 
     <h2>Need Help?</h2>
 
@@ -298,13 +584,23 @@
 
     </p>
 
-    <a href="contactus.html">Contact Support</a>
 
-    <br><br>
+    <a href="contactus.html">
+        Contact Support
+    </a>
 
-    <a href="home.html">Back to Home</a>
+
+    <br>
+    <br>
+
+
+    <a href="Flexbox/home.html">
+        Back to Home
+    </a>
+
 
     <hr>
+
 
     <center>
 
@@ -317,6 +613,16 @@
         </p>
 
     </center>
+
+
+    <!-- =========================================
+         PRACTICAL 4 COMMON JAVASCRIPT
+         
+         scriptc.js is in the same folder
+    ========================================== -->
+
+    <script src="scriptc.js"></script>
+
 
 </body>
 

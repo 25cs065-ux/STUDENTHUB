@@ -2,34 +2,240 @@
 <html>
 
 <head>
+
     <title>About Us - Student Hub</title>
+
+    <style>
+
+        /* =========================================
+           STUDENTHUB NAVIGATION
+        ========================================= */
+
+        #studentNavigation {
+            text-align: center;
+            padding: 15px;
+            border-bottom: 1px solid #ccc;
+        }
+
+        #menuButton,
+        #themeButton {
+            padding: 8px 12px;
+            margin: 5px;
+            cursor: pointer;
+            border: 1px solid #777;
+            background: white;
+        }
+
+        #navMenu {
+            margin-top: 12px;
+        }
+
+        #navMenu a {
+            margin: 8px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+
+        /* =========================================
+           FAQ
+        ========================================= */
+
+        .faqQuestion {
+            width: 100%;
+            text-align: left;
+            padding: 15px;
+            margin-top: 8px;
+            cursor: pointer;
+            border: 1px solid #ccc;
+            background: #f5f5f5;
+            font-weight: bold;
+        }
+
+        .faqAnswer {
+            display: none;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-top: none;
+        }
+
+        .faqAnswer.open {
+            display: block;
+        }
+
+
+        /* =========================================
+           DARK MODE
+        ========================================= */
+
+        body.darkMode {
+            background: #121212;
+            color: #f1f1f1;
+        }
+
+        body.darkMode a {
+            color: #8ab4f8;
+        }
+
+        body.darkMode #studentNavigation {
+            background: #1e1e1e;
+            border-color: #444;
+        }
+
+        body.darkMode #navMenu {
+            background: #1e1e1e;
+        }
+
+        body.darkMode .faqQuestion {
+            background: #222;
+            color: white;
+            border-color: #555;
+        }
+
+        body.darkMode .faqAnswer {
+            background: #1e1e1e;
+            border-color: #555;
+        }
+
+    </style>
+
 </head>
+
 
 <body>
 
-    <!-- Header -->
+
+    <!-- =========================================
+         STUDENTHUB NAVIGATION
+    ========================================== -->
+
+    <div id="studentNavigation">
+
+        <button
+            id="menuButton"
+            aria-expanded="false"
+            aria-controls="navMenu">
+
+            ☰ Menu
+
+        </button>
+
+
+        <button
+            id="themeButton"
+            aria-label="Toggle dark and light mode">
+
+            🌙 Dark Mode
+
+        </button>
+
+
+        <nav id="navMenu" hidden>
+
+            <a href="Flexbox/home.html">
+                Home
+            </a>
+
+            <a href="aboutus.html">
+                About Us
+            </a>
+
+            <a href="dashboard.html">
+                Dashboard
+            </a>
+
+            <a href="attendance.html">
+                Attendance
+            </a>
+
+            <a href="result.html">
+                Results
+            </a>
+
+            <a href="timetable.html">
+                Timetable
+            </a>
+
+            <a href="assignment.html">
+                Assignments
+            </a>
+
+            <a href="studymaterial.html">
+                Study Material
+            </a>
+
+            <a href="notice.html">
+                Notices
+            </a>
+
+            <a href="profile.html">
+                Profile
+            </a>
+
+            <a href="changepass.html">
+                Change Password
+            </a>
+
+            <a href="contactus.html">
+                Contact Us
+            </a>
+
+        </nav>
+
+    </div>
+
+
+    <!-- =========================================
+         ORIGINAL HEADER
+    ========================================== -->
+
     <table width="100%">
+
         <tr>
+
             <td>
-                <img src="logo.png" width="120" alt="Student Hub Logo">
+
+                <img
+                    src="logo.png"
+                    width="120"
+                    alt="Student Hub Logo">
+
             </td>
 
+
             <td align="right">
-                <a href="home.html">Home</a>
+
+                <a href="Flexbox/home.html">
+                    Home
+                </a>
+
             </td>
+
         </tr>
+
     </table>
+
 
     <hr>
 
+
+    <!-- =========================================
+         ORIGINAL ABOUT CONTENT
+    ========================================== -->
+
     <center>
+
         <h1>About Student Hub</h1>
+
         <p>
             <b>Your One-Stop Academic Management System</b>
         </p>
+
     </center>
 
+
     <hr>
+
 
     <h2>Introduction</h2>
 
@@ -56,7 +262,9 @@
         needed in a modern educational environment.
     </p>
 
+
     <hr>
+
 
     <h2>Our Mission</h2>
 
@@ -75,7 +283,9 @@
         and more time focusing on learning and personal development.
     </p>
 
+
     <hr>
+
 
     <h2>Our Vision</h2>
 
@@ -93,7 +303,9 @@
         and real-time notifications to further improve the student experience.
     </p>
 
+
     <hr>
+
 
     <h2>Why Choose Student Hub?</h2>
 
@@ -113,40 +325,105 @@
         convenient.
     </p>
 
+
     <hr>
+
 
     <h2>Features of Student Hub</h2>
 
     <ul>
-        <li>Student Registration and Secure Login System</li>
-        <li>Personal Student Profile Management</li>
-        <li>Attendance Monitoring and Reports</li>
-        <li>Semester Result and Grade Tracking</li>
-        <li>Assignment Upload and Submission</li>
-        <li>Download Study Materials and Notes</li>
-        <li>Latest College Notices and Announcements</li>
-        <li>Class Timetable Management</li>
-        <li>Password Change Facility</li>
-        <li>Easy Navigation Through Dashboard</li>
-        <li>Simple and User-Friendly Interface</li>
-        <li>Centralized Academic Information System</li>
+
+        <li>
+            Student Registration and Secure Login System
+        </li>
+
+        <li>
+            Personal Student Profile Management
+        </li>
+
+        <li>
+            Attendance Monitoring and Reports
+        </li>
+
+        <li>
+            Semester Result and Grade Tracking
+        </li>
+
+        <li>
+            Assignment Upload and Submission
+        </li>
+
+        <li>
+            Download Study Materials and Notes
+        </li>
+
+        <li>
+            Latest College Notices and Announcements
+        </li>
+
+        <li>
+            Class Timetable Management
+        </li>
+
+        <li>
+            Password Change Facility
+        </li>
+
+        <li>
+            Easy Navigation Through Dashboard
+        </li>
+
+        <li>
+            Simple and User-Friendly Interface
+        </li>
+
+        <li>
+            Centralized Academic Information System
+        </li>
+
     </ul>
 
+
     <hr>
+
 
     <h2>Benefits for Students</h2>
 
     <ul>
-        <li>Quick access to all academic information.</li>
-        <li>Reduces paperwork and manual record keeping.</li>
-        <li>Saves time by providing information online.</li>
-        <li>Improves communication between students and faculty.</li>
-        <li>Provides organized access to study resources.</li>
-        <li>Allows students to monitor academic performance regularly.</li>
-        <li>Accessible anytime using an internet connection.</li>
+
+        <li>
+            Quick access to all academic information.
+        </li>
+
+        <li>
+            Reduces paperwork and manual record keeping.
+        </li>
+
+        <li>
+            Saves time by providing information online.
+        </li>
+
+        <li>
+            Improves communication between students and faculty.
+        </li>
+
+        <li>
+            Provides organized access to study resources.
+        </li>
+
+        <li>
+            Allows students to monitor academic performance regularly.
+        </li>
+
+        <li>
+            Accessible anytime using an internet connection.
+        </li>
+
     </ul>
 
+
     <hr>
+
 
     <h2>Our Commitment</h2>
 
@@ -164,7 +441,132 @@
         digital transformation in educational institutions.
     </p>
 
+
     <hr>
+
+
+    <!-- =========================================
+         PRACTICAL 4 - COLLAPSIBLE FAQ
+    ========================================== -->
+
+    <h2>Frequently Asked Questions</h2>
+
+
+    <button
+        class="faqQuestion"
+        aria-expanded="false">
+
+        What is Student Hub?
+
+    </button>
+
+
+    <div class="faqAnswer">
+
+        <p>
+
+            Student Hub is a centralized academic portal
+            that gives students access to their academic
+            information and services from one platform.
+
+        </p>
+
+    </div>
+
+
+    <button
+        class="faqQuestion"
+        aria-expanded="false">
+
+        What services are available in Student Hub?
+
+    </button>
+
+
+    <div class="faqAnswer">
+
+        <p>
+
+            Student Hub provides services such as attendance,
+            results, assignments, notices, study material,
+            timetable, profile management and other academic
+            resources.
+
+        </p>
+
+    </div>
+
+
+    <button
+        class="faqQuestion"
+        aria-expanded="false">
+
+        How can I check my attendance?
+
+    </button>
+
+
+    <div class="faqAnswer">
+
+        <p>
+
+            Open the Attendance page from the Student Hub
+            navigation menu to view your subject-wise
+            attendance information.
+
+        </p>
+
+    </div>
+
+
+    <button
+        class="faqQuestion"
+        aria-expanded="false">
+
+        Where can I check my results?
+
+    </button>
+
+
+    <div class="faqAnswer">
+
+        <p>
+
+            Open the Results page to view your
+            examination results and grades.
+
+        </p>
+
+    </div>
+
+
+    <button
+        class="faqQuestion"
+        aria-expanded="false">
+
+        How can I contact support?
+
+    </button>
+
+
+    <div class="faqAnswer">
+
+        <p>
+
+            Visit the Contact Us page to find support
+            information and contact details.
+
+        </p>
+
+    </div>
+
+
+    <hr>
+
+
+    <!-- =========================================
+         ORIGINAL SUPPORT SECTION
+    ========================================== -->
 
     <h2>Need Assistance?</h2>
 
@@ -179,16 +581,33 @@
         For any queries, please visit our Contact Us page.
     </p>
 
-    <a href="contactus.html">Contact Support</a>
+    <a href="contactus.html">
+        Contact Support
+    </a>
+
 
     <hr>
 
+
     <center>
+
         <p>
+
             <b>Student Hub</b><br>
+
             Empowering Students Through Technology
+
         </p>
+
     </center>
+
+
+    <!-- =========================================
+         COMMON PRACTICAL 4 JAVASCRIPT
+    ========================================== -->
+
+    <script src="scriptc.js"></script>
+
 
 </body>
 

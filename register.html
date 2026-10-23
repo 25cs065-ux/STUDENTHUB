@@ -1,328 +1,107 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-
-    <title>Register - Student Hub</title>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-
-    <!-- Header -->
-
-    <table width="100%">
-
-        <tr>
-
-            <td>
-
-                <img src="logo.png" width="120" alt="Student Hub Logo">
-
-            </td>
-
-            <td align="right">
-
-                <a href="home.html">Home</a>
-
-            </td>
-
-        </tr>
-
-    </table>
-
-    <hr>
-
-    <center>
-
-        <h1>Create Student Account</h1>
-
-        <p>
-
-            <b>Register to access all Student Hub services.</b>
-
-        </p>
-
-    </center>
-
-    <hr>
-
-    <h2>Registration Information</h2>
-
-    <p>
-
-        Welcome to Student Hub. New students can create an account to
-        access attendance records, examination results, assignments,
-        study materials, notices, class timetables, and profile
-        information. Please fill in all the required details carefully
-        to complete your registration successfully.
-
-    </p>
-
-    <p>
-
-        Make sure the information you provide matches your official
-        college records. Incorrect information may delay account
-        verification.
-
-    </p>
-
-    <hr>
-
-    <center>
-
-        <form action="login.html">
-
-            <table cellpadding="8">
-
-                <tr>
-
-                    <td>Full Name</td>
-
-                    <td>
-
-                        <input type="text"
-                               placeholder="Enter your full name"
-                               required>
-
-                    </td>
-
-                </tr>
-
-                <tr>
-
-                    <td>Enrollment Number</td>
-
-                    <td>
-
-                        <input type="text"
-                               placeholder="Enter enrollment number"
-                               required>
-
-                    </td>
-
-                </tr>
-
-                <tr>
-
-                    <td>Email Address</td>
-
-                    <td>
-
-                        <input type="email"
-                               placeholder="Enter your email"
-                               required>
-
-                    </td>
-
-                </tr>
-
-                <tr>
-
-                    <td>Mobile Number</td>
-
-                    <td>
-
-                        <input type="tel"
-                               placeholder="Enter mobile number"
-                               required>
-
-                    </td>
-
-                </tr>
-
-                <tr>
-
-                    <td>Course</td>
-
-                    <td>
-
-                        <input type="text"
-                               placeholder="Example: B.Tech"
-                               required>
-
-                    </td>
-
-                </tr>
-
-                <tr>
-
-                    <td>Branch</td>
-
-                    <td>
-
-                        <input type="text"
-                               placeholder="Example: Computer Science Engineering"
-                               required>
-
-                    </td>
-
-                </tr>
-
-                <tr>
-
-                    <td>Semester</td>
-
-                    <td>
-
-                        <input type="number"
-                               min="1"
-                               max="8"
-                               required>
-
-                    </td>
-
-                </tr>
-
-                <tr>
-
-                    <td>Username</td>
-
-                    <td>
-
-                        <input type="text"
-                               placeholder="Choose a username"
-                               required>
-
-                    </td>
-
-                </tr>
-
-                <tr>
-
-                    <td>Password</td>
-
-                    <td>
-
-                        <input type="password"
-                               placeholder="Create a password"
-                               required>
-
-                    </td>
-
-                </tr>
-
-                <tr>
-
-                    <td>Confirm Password</td>
-
-                    <td>
-
-                        <input type="password"
-                               placeholder="Re-enter password"
-                               required>
-
-                    </td>
-
-                </tr>
-
-                <tr>
-
-                    <td colspan="2" align="center">
-
-                        <input type="submit" value="Register">
-
-                        &nbsp;
-
-                        <input type="reset" value="Clear Form">
-
-                    </td>
-
-                </tr>
-
-            </table>
-
+    <main class="container">
+        <h1>Student Registration Form</h1>
+        <p class="description">Please fill in all the details correctly.</p>
+
+        <form id="registrationForm" action="process_register.php" method="POST" novalidate>
+
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your full name" autocomplete="name">
+                <span class="error" id="nameError"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="example@gmail.com" autocomplete="email">
+                <span class="error" id="emailError"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="mobile">Mobile Number</label>
+                <input type="tel" id="mobile" name="mobile" placeholder="Enter 10-digit mobile number"
+                       maxlength="10" inputmode="numeric" autocomplete="tel">
+                <span class="error" id="mobileError"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Minimum 8 characters"
+                       autocomplete="new-password" aria-describedby="passwordHelp">
+                <small id="passwordHelp">At least 8 characters with uppercase, lowercase, a number and a special character.</small>
+                <div class="strength-container"><div id="strengthBar"></div></div>
+                <p id="strengthText" class="strength-text">Password strength: Not entered</p>
+                <span class="error" id="passwordError"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="confirmPassword">Confirm Password</label>
+                <input type="password" id="confirmPassword" name="confirmPassword"
+                       placeholder="Re-enter your password" autocomplete="new-password">
+                <span class="error" id="confirmPasswordError"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="course">Course</label>
+                <select id="course" name="course">
+                    <option value="">-- Select Course --</option>
+                    <option value="CSE">Computer Science Engineering</option>
+                    <option value="IT">Information Technology</option>
+                    <option value="CE">Computer Engineering</option>
+                    <option value="ECE">Electronics &amp; Communication</option>
+                    <option value="ME">Mechanical Engineering</option>
+                </select>
+                <span class="error" id="courseError"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="year">Year</label>
+                <select id="year" name="year">
+                    <option value="">-- Select Year --</option>
+                    <option value="1">First Year</option>
+                    <option value="2">Second Year</option>
+                    <option value="3">Third Year</option>
+                    <option value="4">Fourth Year</option>
+                </select>
+                <span class="error" id="yearError"></span>
+            </div>
+
+            <fieldset>
+                <legend>Gender</legend>
+                <div class="gender-options">
+                    <label><input type="radio" name="gender" value="Male"> Male</label>
+                    <label><input type="radio" name="gender" value="Female"> Female</label>
+                    <label><input type="radio" name="gender" value="Other"> Other</label>
+                </div>
+                <span class="error" id="genderError"></span>
+            </fieldset>
+
+            <div class="terms">
+                <label>
+                    <input type="checkbox" id="terms" name="terms">
+                    I agree to the Terms and Conditions.
+                </label>
+                <span class="error" id="termsError"></span>
+            </div>
+
+            <button type="submit">Register</button>
+            <p id="successMessage" class="success" aria-live="polite"></p>
         </form>
 
-    </center>
-
-    <hr>
-
-    <h2>Registration Guidelines</h2>
-
-    <ul>
-
-        <li>Fill in all mandatory fields carefully.</li>
-
-        <li>Use your official college email address if available.</li>
-
-        <li>Create a strong password containing letters, numbers, and special characters.</li>
-
-        <li>Keep your username and password confidential.</li>
-
-        <li>Ensure all information matches your college records.</li>
-
-    </ul>
-
-    <hr>
-
-    <h2>Benefits of Registration</h2>
-
-    <ul>
-
-        <li>Access attendance records online.</li>
-
-        <li>View semester examination results.</li>
-
-        <li>Check assignment deadlines.</li>
-
-        <li>Download study materials.</li>
-
-        <li>View class timetable.</li>
-
-        <li>Receive important college notices.</li>
-
-        <li>Manage your student profile.</li>
-
-        <li>Change your password securely.</li>
-
-    </ul>
-
-    <hr>
-
-    <h2>Already Registered?</h2>
-
-    <p>
-
-        If you already have a Student Hub account, you can log in using
-        your username and password.
-
-    </p>
-
-    <a href="login.html">Go to Login Page</a>
-
-    <hr>
-
-    <h2>Need Help?</h2>
-
-    <p>
-
-        If you face any difficulty while creating your account or
-        entering your information, please contact the Student Hub
-        Support Team.
-
-    </p>
-
-    <a href="contactus.html">Contact Support</a>
-
-    <br><br>
-
-    <a href="home.html">Back to Home</a>
-
-    <hr>
-
-    <center>
-
-        <p>
-
-            <b>Student Hub</b><br>
-
-            Register Today • Learn Better • Stay Connected
-
+        <p style="text-align:center;margin-top:18px;">
+            Already registered? <a href="login.php">Login here</a>
         </p>
+    </main>
 
-    </center>
-
+    <script src="script.js"></script>
 </body>
-
 </html>

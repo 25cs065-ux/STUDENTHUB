@@ -5,229 +5,651 @@
 
     <title>Attendance - Student Hub</title>
 
+
+    <!-- =========================================
+         PRACTICAL 4 - NAVIGATION + DARK MODE CSS
+    ========================================== -->
+
+    <style>
+
+        /* =========================================
+           STUDENTHUB NAVIGATION
+        ========================================== */
+
+        #studentNavigation {
+
+            text-align: center;
+
+            padding: 15px;
+
+            border-bottom: 1px solid #ccc;
+
+        }
+
+
+        #menuButton,
+        #themeButton {
+
+            padding: 8px 12px;
+
+            margin: 5px;
+
+            cursor: pointer;
+
+            border: 1px solid #777;
+
+            background: white;
+
+        }
+
+
+        #navMenu {
+
+            margin-top: 12px;
+
+        }
+
+
+        #navMenu a {
+
+            margin: 8px;
+
+            text-decoration: none;
+
+            font-weight: bold;
+
+        }
+
+
+        /* =========================================
+           DARK MODE
+        ========================================== */
+
+        body.darkMode {
+
+            background: #121212;
+
+            color: #f1f1f1;
+
+        }
+
+
+        body.darkMode a {
+
+            color: #8ab4f8;
+
+        }
+
+
+        body.darkMode #studentNavigation {
+
+            background: #1e1e1e;
+
+            border-color: #444;
+
+        }
+
+
+        /* =========================================
+           TABLES IN DARK MODE
+        ========================================== */
+
+        body.darkMode table {
+
+            background: #1e1e1e;
+
+            color: #f1f1f1;
+
+        }
+
+
+        body.darkMode th,
+        body.darkMode td {
+
+            border-color: #777;
+
+        }
+
+
+        /* =========================================
+           RESPONSIVE NAVIGATION
+        ========================================== */
+
+        @media (max-width: 700px) {
+
+            #navMenu a {
+
+                display: block;
+
+                margin: 10px;
+
+            }
+
+        }
+
+    </style>
+
 </head>
+
 
 <body>
 
-    <!-- Header -->
+
+    <!-- =========================================
+         STUDENTHUB COMMON NAVIGATION
+    ========================================== -->
+
+    <div id="studentNavigation">
+
+
+        <button
+            id="menuButton"
+            aria-expanded="false"
+            aria-controls="navMenu">
+
+            ☰ Menu
+
+        </button>
+
+
+        <button
+            id="themeButton"
+            aria-label="Toggle dark and light mode">
+
+            🌙 Dark Mode
+
+        </button>
+
+
+        <nav id="navMenu" hidden>
+
+            <a href="Flexbox/home.html">
+                Home
+            </a>
+
+            <a href="aboutus.html">
+                About Us
+            </a>
+
+            <a href="dashboard.html">
+                Dashboard
+            </a>
+
+            <a href="attendance.html">
+                Attendance
+            </a>
+
+            <a href="result.html">
+                Results
+            </a>
+
+            <a href="timetable.html">
+                Timetable
+            </a>
+
+            <a href="assignment.html">
+                Assignments
+            </a>
+
+            <a href="studymaterial.html">
+                Study Material
+            </a>
+
+            <a href="notice.html">
+                Notices
+            </a>
+
+            <a href="profile.html">
+                Profile
+            </a>
+
+            <a href="changepass.html">
+                Change Password
+            </a>
+
+            <a href="contactus.html">
+                Contact Us
+            </a>
+
+        </nav>
+
+    </div>
+
+
+    <!-- =========================================
+         ORIGINAL HEADER
+    ========================================== -->
 
     <table width="100%">
+
         <tr>
 
             <td>
-                <img src="logo.png" width="120" alt="Student Hub Logo">
+
+                <img
+                    src="logo.png"
+                    width="120"
+                    alt="Student Hub Logo">
+
             </td>
 
+
             <td align="right">
-                <a href="home.html">Home</a>
+
+                <a href="Flexbox/home.html">
+                    Home
+                </a>
+
             </td>
 
         </tr>
+
     </table>
 
+
     <hr>
+
+
+    <!-- =========================================
+         PAGE TITLE
+    ========================================== -->
 
     <center>
 
         <h1>Attendance Record</h1>
 
         <p>
-            <b>Track your attendance and stay eligible for examinations.</b>
+            <b>
+                Track your attendance and stay eligible
+                for examinations.
+            </b>
         </p>
 
     </center>
 
+
     <hr>
+
+
+    <!-- =========================================
+         ATTENDANCE OVERVIEW
+    ========================================== -->
 
     <h2>Attendance Overview</h2>
 
     <p>
-        The Attendance section allows students to monitor their class attendance
-        for every subject throughout the semester. Regular attendance is an
-        important part of academic success, as it helps students understand
-        classroom concepts, participate in practical sessions, and stay updated
-        with course progress.
+
+        The Attendance section allows students to monitor
+        their class attendance for every subject throughout
+        the semester. Regular attendance is an important
+        part of academic success, as it helps students
+        understand classroom concepts, participate in
+        practical sessions, and stay updated with course
+        progress.
+
     </p>
+
 
     <p>
-        Students are encouraged to check their attendance regularly to ensure
-        they meet the minimum attendance requirements prescribed by the
-        institution. Maintaining good attendance also improves academic
-        performance and overall learning experience.
+
+        Students are encouraged to check their attendance
+        regularly to ensure they meet the minimum attendance
+        requirements prescribed by the institution. Maintaining
+        good attendance also improves academic performance
+        and overall learning experience.
+
     </p>
 
+
     <hr>
+
+
+    <!-- =========================================
+         STUDENT ATTENDANCE SUMMARY
+    ========================================== -->
 
     <h2>Student Attendance Summary</h2>
 
+
     <table border="1" cellpadding="10">
 
         <tr>
-            <th>Total Subjects</th>
-            <th>Overall Attendance</th>
-            <th>Attendance Status</th>
+
+            <th>
+                Total Subjects
+            </th>
+
+            <th>
+                Overall Attendance
+            </th>
+
+            <th>
+                Attendance Status
+            </th>
+
         </tr>
 
+
         <tr>
-            <td>4</td>
-            <td>91.25%</td>
-            <td>Excellent</td>
+
+            <td>
+                4
+            </td>
+
+            <td>
+                91.25%
+            </td>
+
+            <td>
+                Excellent
+            </td>
+
         </tr>
 
     </table>
 
+
     <hr>
+
+
+    <!-- =========================================
+         SUBJECT-WISE ATTENDANCE
+    ========================================== -->
 
     <h2>Subject-wise Attendance</h2>
 
+
     <table border="1" cellpadding="10">
 
         <tr>
 
-            <th>Subject</th>
+            <th>
+                Subject
+            </th>
 
-            <th>Total Classes</th>
+            <th>
+                Total Classes
+            </th>
 
-            <th>Classes Attended</th>
+            <th>
+                Classes Attended
+            </th>
 
-            <th>Attendance Percentage</th>
+            <th>
+                Attendance Percentage
+            </th>
 
-            <th>Status</th>
-
-        </tr>
-
-        <tr>
-
-            <td>Programming with C++</td>
-
-            <td>40</td>
-
-            <td>36</td>
-
-            <td>90%</td>
-
-            <td>Good</td>
+            <th>
+                Status
+            </th>
 
         </tr>
 
+
         <tr>
 
-            <td>Engineering Mathematics-II</td>
+            <td>
+                Programming with C++
+            </td>
 
-            <td>42</td>
+            <td>
+                40
+            </td>
 
-            <td>37</td>
+            <td>
+                36
+            </td>
 
-            <td>88%</td>
+            <td>
+                90%
+            </td>
 
-            <td>Good</td>
+            <td>
+                Good
+            </td>
 
         </tr>
 
+
         <tr>
 
-            <td>Digital Electronics</td>
+            <td>
+                Engineering Mathematics-II
+            </td>
 
-            <td>40</td>
+            <td>
+                42
+            </td>
 
-            <td>38</td>
+            <td>
+                37
+            </td>
 
-            <td>95%</td>
+            <td>
+                88%
+            </td>
 
-            <td>Excellent</td>
+            <td>
+                Good
+            </td>
 
         </tr>
 
+
         <tr>
 
-            <td>Engineering Physics-II</td>
+            <td>
+                Digital Electronics
+            </td>
 
-            <td>39</td>
+            <td>
+                40
+            </td>
 
-            <td>36</td>
+            <td>
+                38
+            </td>
 
-            <td>92%</td>
+            <td>
+                95%
+            </td>
 
-            <td>Excellent</td>
+            <td>
+                Excellent
+            </td>
+
+        </tr>
+
+
+        <tr>
+
+            <td>
+                Engineering Physics-II
+            </td>
+
+            <td>
+                39
+            </td>
+
+            <td>
+                36
+            </td>
+
+            <td>
+                92%
+            </td>
+
+            <td>
+                Excellent
+            </td>
 
         </tr>
 
     </table>
 
+
     <hr>
+
+
+    <!-- =========================================
+         ATTENDANCE RULES
+    ========================================== -->
 
     <h2>Attendance Rules</h2>
 
+
     <ul>
 
-        <li>Students should attend all scheduled lectures and practical sessions.</li>
+        <li>
+            Students should attend all scheduled lectures
+            and practical sessions.
+        </li>
 
-        <li>A minimum attendance of <b>75%</b> is generally required to appear for examinations.</li>
+        <li>
+            A minimum attendance of <b>75%</b> is generally
+            required to appear for examinations.
+        </li>
 
-        <li>Medical or emergency leave should be supported by valid documents.</li>
+        <li>
+            Medical or emergency leave should be supported
+            by valid documents.
+        </li>
 
-        <li>Attendance records are updated regularly by faculty members.</li>
+        <li>
+            Attendance records are updated regularly by
+            faculty members.
+        </li>
 
-        <li>Students should report any discrepancies to the concerned department immediately.</li>
+        <li>
+            Students should report any discrepancies to
+            the concerned department immediately.
+        </li>
 
     </ul>
 
+
     <hr>
+
+
+    <!-- =========================================
+         BENEFITS OF GOOD ATTENDANCE
+    ========================================== -->
 
     <h2>Benefits of Good Attendance</h2>
 
+
     <ul>
 
-        <li>Improves understanding of classroom concepts.</li>
+        <li>
+            Improves understanding of classroom concepts.
+        </li>
 
-        <li>Increases participation in practical and laboratory sessions.</li>
+        <li>
+            Increases participation in practical and
+            laboratory sessions.
+        </li>
 
-        <li>Helps students perform better in examinations.</li>
+        <li>
+            Helps students perform better in examinations.
+        </li>
 
-        <li>Reduces the chances of missing important announcements.</li>
+        <li>
+            Reduces the chances of missing important
+            announcements.
+        </li>
 
-        <li>Maintains eligibility for semester examinations.</li>
+        <li>
+            Maintains eligibility for semester examinations.
+        </li>
 
     </ul>
 
+
     <hr>
+
+
+    <!-- =========================================
+         ATTENDANCE TIPS
+    ========================================== -->
 
     <h2>Attendance Tips</h2>
 
+
     <p>
-        Plan your daily schedule carefully and arrive on time for every class.
-        Attend lectures regularly, participate in discussions, and avoid
-        unnecessary absences. If you miss a class due to unavoidable
-        circumstances, inform your faculty member and complete the missed work
-        as soon as possible.
+
+        Plan your daily schedule carefully and arrive on
+        time for every class. Attend lectures regularly,
+        participate in discussions, and avoid unnecessary
+        absences. If you miss a class due to unavoidable
+        circumstances, inform your faculty member and
+        complete the missed work as soon as possible.
+
     </p>
 
+
     <hr>
+
+
+    <!-- =========================================
+         NEED ASSISTANCE
+    ========================================== -->
 
     <h2>Need Assistance?</h2>
 
+
     <p>
-        If you believe your attendance record is incorrect or have questions
-        regarding attendance policies, please contact your faculty advisor or
-        visit the Contact Us page for assistance.
+
+        If you believe your attendance record is incorrect
+        or have questions regarding attendance policies,
+        please contact your faculty advisor or visit the
+        Contact Us page for assistance.
+
     </p>
 
-    <a href="contactus.html">Contact Support</a>
 
-    <br><br>
+    <a href="contactus.html">
+        Contact Support
+    </a>
 
-    <a href="home.html">Back to Home</a>
+
+    <br>
+    <br>
+
+
+    <a href="Flexbox/home.html">
+        Back to Home
+    </a>
+
 
     <hr>
+
+
+    <!-- =========================================
+         FOOTER
+    ========================================== -->
 
     <center>
 
         <p>
+
             <b>Student Hub</b><br>
+
             Helping Students Stay on Track
+
         </p>
 
     </center>
+
+
+    <!-- =========================================
+         COMMON PRACTICAL 4 JAVASCRIPT
+         
+         scriptc.js is in the SAME folder
+         as attendance.html
+    ========================================== -->
+
+    <script src="scriptc.js"></script>
+
 
 </body>
 

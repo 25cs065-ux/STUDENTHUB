@@ -5,11 +5,161 @@
 
     <title>Study Material - Student Hub</title>
 
+    <style>
+
+        /* =========================================
+           STUDENTHUB NAVIGATION
+        ========================================= */
+
+        #studentNavigation {
+            text-align: center;
+            padding: 15px;
+            border-bottom: 1px solid #ccc;
+        }
+
+        #menuButton,
+        #themeButton {
+            padding: 8px 12px;
+            margin: 5px;
+            cursor: pointer;
+            border: 1px solid #777;
+            background: white;
+        }
+
+        #navMenu {
+            margin-top: 12px;
+        }
+
+        #navMenu a {
+            margin: 8px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+
+        /* =========================================
+           DARK MODE
+        ========================================= */
+
+        body.darkMode {
+            background: #121212;
+            color: #f1f1f1;
+        }
+
+        body.darkMode a {
+            color: #8ab4f8;
+        }
+
+        body.darkMode #studentNavigation {
+            background: #1e1e1e;
+            border-color: #444;
+        }
+
+        body.darkMode #navMenu {
+            background: #1e1e1e;
+        }
+
+        body.darkMode table {
+            background: #1e1e1e;
+            color: #f1f1f1;
+        }
+
+        body.darkMode th,
+        body.darkMode td {
+            border-color: #777;
+        }
+
+    </style>
+
 </head>
+
 
 <body>
 
-    <!-- Header -->
+
+    <!-- =========================================
+         STUDENTHUB NAVIGATION
+    ========================================== -->
+
+    <div id="studentNavigation">
+
+        <button
+            id="menuButton"
+            aria-expanded="false"
+            aria-controls="navMenu">
+
+            ☰ Menu
+
+        </button>
+
+
+        <button
+            id="themeButton"
+            aria-label="Toggle dark and light mode">
+
+            🌙 Dark Mode
+
+        </button>
+
+
+        <nav id="navMenu" hidden>
+
+            <a href="Flexbox/home.html">
+                Home
+            </a>
+
+            <a href="aboutus.html">
+                About Us
+            </a>
+
+            <a href="dashboard.html">
+                Dashboard
+            </a>
+
+            <a href="attendance.html">
+                Attendance
+            </a>
+
+            <a href="result.html">
+                Results
+            </a>
+
+            <a href="timetable.html">
+                Timetable
+            </a>
+
+            <a href="assignment.html">
+                Assignments
+            </a>
+
+            <a href="studymaterial.html">
+                Study Material
+            </a>
+
+            <a href="notice.html">
+                Notices
+            </a>
+
+            <a href="profile.html">
+                Profile
+            </a>
+
+            <a href="changepass.html">
+                Change Password
+            </a>
+
+            <a href="contactus.html">
+                Contact Us
+            </a>
+
+        </nav>
+
+    </div>
+
+
+    <!-- =========================================
+         ORIGINAL HEADER
+    ========================================== -->
 
     <table width="100%">
 
@@ -17,13 +167,18 @@
 
             <td>
 
-                <img src="logo.png" width="120" alt="Student Hub Logo">
+                <img
+                    src="logo.png"
+                    width="120"
+                    alt="Student Hub Logo">
 
             </td>
 
             <td align="right">
 
-                <a href="home.html">Home</a>
+                <a href="Flexbox/home.html">
+                    Home
+                </a>
 
             </td>
 
@@ -31,7 +186,13 @@
 
     </table>
 
+
     <hr>
+
+
+    <!-- =========================================
+         ORIGINAL PAGE CONTENT
+    ========================================== -->
 
     <center>
 
@@ -39,37 +200,48 @@
 
         <p>
 
-            <b>Access learning resources, notes, and reference materials for all subjects.</b>
+            <b>
+                Access learning resources, notes, and
+                reference materials for all subjects.
+            </b>
 
         </p>
 
     </center>
 
+
     <hr>
+
 
     <h2>Study Material Overview</h2>
 
     <p>
 
-        The Study Material section provides students with important academic
-        resources required for classroom learning and examination preparation.
-        Here, students can access lecture notes, practical manuals, reference
-        books, presentations, previous question papers, and other useful
-        learning materials uploaded by faculty members.
+        The Study Material section provides students with
+        important academic resources required for classroom
+        learning and examination preparation. Here, students
+        can access lecture notes, practical manuals,
+        reference books, presentations, previous question
+        papers, and other useful learning materials uploaded
+        by faculty members.
 
     </p>
+
 
     <p>
 
-        Students are encouraged to download the latest study materials
-        regularly and use them along with classroom lectures to improve
-        their understanding of each subject.
+        Students are encouraged to download the latest study
+        materials regularly and use them along with classroom
+        lectures to improve their understanding of each subject.
 
     </p>
 
+
     <hr>
 
+
     <h2>Available Study Materials</h2>
+
 
     <table border="1" cellpadding="10">
 
@@ -85,6 +257,7 @@
 
         </tr>
 
+
         <tr>
 
             <td>Programming with C++</td>
@@ -93,9 +266,14 @@
 
             <td>PDF Notes</td>
 
-            <td><a href="#">Download</a></td>
+            <td>
+                <a href="#">
+                    Download
+                </a>
+            </td>
 
         </tr>
+
 
         <tr>
 
@@ -105,9 +283,14 @@
 
             <td>PDF Notes</td>
 
-            <td><a href="#">Download</a></td>
+            <td>
+                <a href="#">
+                    Download
+                </a>
+            </td>
 
         </tr>
+
 
         <tr>
 
@@ -117,9 +300,14 @@
 
             <td>Lecture Notes</td>
 
-            <td><a href="#">Download</a></td>
+            <td>
+                <a href="#">
+                    Download
+                </a>
+            </td>
 
         </tr>
+
 
         <tr>
 
@@ -129,25 +317,38 @@
 
             <td>Presentation</td>
 
-            <td><a href="#">Download</a></td>
+            <td>
+                <a href="#">
+                    Download
+                </a>
+            </td>
 
         </tr>
+
 
         <tr>
 
             <td>Environmental Science</td>
 
-            <td>Climate Change & Sustainability</td>
+            <td>
+                Climate Change & Sustainability
+            </td>
 
             <td>Reference Notes</td>
 
-            <td><a href="#">Download</a></td>
+            <td>
+                <a href="#">
+                    Download
+                </a>
+            </td>
 
         </tr>
 
     </table>
 
+
     <hr>
+
 
     <h2>Additional Learning Resources</h2>
 
@@ -175,45 +376,75 @@
 
     </ul>
 
+
     <hr>
+
 
     <h2>Study Tips</h2>
 
     <ul>
 
-        <li>Download study materials before every lecture.</li>
+        <li>
+            Download study materials before every lecture.
+        </li>
 
-        <li>Revise your notes regularly.</li>
+        <li>
+            Revise your notes regularly.
+        </li>
 
-        <li>Practice numerical problems and programming exercises.</li>
+        <li>
+            Practice numerical problems and programming exercises.
+        </li>
 
-        <li>Refer to previous year question papers before examinations.</li>
+        <li>
+            Refer to previous year question papers before examinations.
+        </li>
 
-        <li>Prepare short notes for quick revision.</li>
+        <li>
+            Prepare short notes for quick revision.
+        </li>
 
-        <li>Discuss difficult topics with faculty members or classmates.</li>
+        <li>
+            Discuss difficult topics with faculty members or classmates.
+        </li>
 
     </ul>
 
+
     <hr>
+
 
     <h2>Important Instructions</h2>
 
     <ul>
 
-        <li>Study materials are provided only for academic purposes.</li>
+        <li>
+            Study materials are provided only for academic purposes.
+        </li>
 
-        <li>Always download the latest version of the notes.</li>
+        <li>
+            Always download the latest version of the notes.
+        </li>
 
-        <li>Do not modify or redistribute official study materials without permission.</li>
+        <li>
+            Do not modify or redistribute official study materials
+            without permission.
+        </li>
 
-        <li>Contact the concerned faculty if any file is missing or corrupted.</li>
+        <li>
+            Contact the concerned faculty if any file is missing
+            or corrupted.
+        </li>
 
-        <li>Visit this page regularly for newly uploaded resources.</li>
+        <li>
+            Visit this page regularly for newly uploaded resources.
+        </li>
 
     </ul>
 
+
     <hr>
+
 
     <h2>Need Help?</h2>
 
@@ -225,13 +456,22 @@
 
     </p>
 
-    <a href="contactus.html">Contact Support</a>
+
+    <a href="contactus.html">
+        Contact Support
+    </a>
+
 
     <br><br>
 
-    <a href="home.html">Back to Home</a>
+
+    <a href="Flexbox/home.html">
+        Back to Home
+    </a>
+
 
     <hr>
+
 
     <center>
 
@@ -244,6 +484,14 @@
         </p>
 
     </center>
+
+
+    <!-- =========================================
+         COMMON PRACTICAL 4 JAVASCRIPT
+    ========================================== -->
+
+    <script src="scriptc.js"></script>
+
 
 </body>
 

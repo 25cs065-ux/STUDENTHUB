@@ -5,9 +5,159 @@
 
     <title>Logout - Student Hub</title>
 
+    <style>
+
+        /* =========================================
+           STUDENTHUB NAVIGATION
+        ========================================== */
+
+        #studentNavigation {
+            text-align: center;
+            padding: 15px;
+            border-bottom: 1px solid #ccc;
+        }
+
+        #menuButton,
+        #themeButton {
+            padding: 8px 12px;
+            margin: 5px;
+            cursor: pointer;
+            border: 1px solid #777;
+            background: white;
+        }
+
+        #navMenu {
+            margin-top: 12px;
+        }
+
+        #navMenu a {
+            margin: 8px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+
+        /* =========================================
+           DARK MODE
+        ========================================== */
+
+        body {
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        body.darkMode {
+            background: #121212;
+            color: #f1f1f1;
+        }
+
+        body.darkMode a {
+            color: #8ab4f8;
+        }
+
+        body.darkMode #studentNavigation {
+            background: #1e1e1e;
+            border-color: #444;
+        }
+
+        body.darkMode #navMenu {
+            background: #1e1e1e;
+        }
+
+    </style>
+
 </head>
 
+
 <body>
+
+
+    <!-- =========================================
+         STUDENTHUB NAVIGATION
+    ========================================== -->
+
+    <div id="studentNavigation">
+
+        <button
+            id="menuButton"
+            aria-expanded="false"
+            aria-controls="navMenu">
+
+            ☰ Menu
+
+        </button>
+
+
+        <button
+            id="themeButton"
+            aria-label="Toggle dark and light mode">
+
+            🌙 Dark Mode
+
+        </button>
+
+
+        <nav id="navMenu" hidden>
+
+            <a href="Flexbox/home.html">
+                Home
+            </a>
+
+            <a href="aboutus.html">
+                About Us
+            </a>
+
+            <a href="dashboard.html">
+                Dashboard
+            </a>
+
+            <a href="attendance.html">
+                Attendance
+            </a>
+
+            <a href="result.html">
+                Results
+            </a>
+
+            <a href="timetable.html">
+                Timetable
+            </a>
+
+            <a href="assignment.html">
+                Assignments
+            </a>
+
+            <a href="studymaterial.html">
+                Study Material
+            </a>
+
+            <a href="notice.html">
+                Notices
+            </a>
+
+            <a href="profile.html">
+                Profile
+            </a>
+
+            <a href="changepass.html">
+                Change Password
+            </a>
+
+            <a href="contactus.html">
+                Contact Us
+            </a>
+
+            <a href="logout.html">
+                Logout
+            </a>
+
+        </nav>
+
+    </div>
+
+
+    <!-- =========================================
+         EXISTING LOGOUT CONTENT
+    ========================================== -->
 
     <center>
 
@@ -16,22 +166,27 @@
         <hr width="50%">
 
         <p>
-            <b>You have successfully logged out of your Student Hub account.</b>
+            <b>
+                You have successfully logged out of your
+                Student Hub account.
+            </b>
         </p>
 
         <p>
-            Thank you for using Student Hub. We hope our platform helped you
-            manage your academic activities efficiently by providing easy
-            access to attendance records, examination results, assignments,
-            study materials, notices, class timetables, and your student
-            profile.
+            Thank you for using Student Hub. We hope our
+            platform helped you manage your academic activities
+            efficiently by providing easy access to attendance
+            records, examination results, assignments, study
+            materials, notices, class timetables, and your
+            student profile.
         </p>
 
         <p>
-            Your session has been ended successfully to protect your personal
-            and academic information. For your security, always remember to
-            log out after using Student Hub, especially when accessing your
-            account from a shared or public computer.
+            Your session has been ended successfully to protect
+            your personal and academic information. For your
+            security, always remember to log out after using
+            Student Hub, especially when accessing your account
+            from a shared or public computer.
         </p>
 
         <hr width="50%">
@@ -39,13 +194,15 @@
         <h2>What's Next?</h2>
 
         <p>
-            You can log in again at any time to continue using Student Hub
-            and access the latest updates regarding your academic progress.
+            You can log in again at any time to continue using
+            Student Hub and access the latest updates regarding
+            your academic progress.
         </p>
 
         <p>
-            If you experience any issues while logging in again, please
-            contact the Student Hub Support Team for assistance.
+            If you experience any issues while logging in again,
+            please contact the Student Hub Support Team for
+            assistance.
         </p>
 
         <hr width="50%">
@@ -54,19 +211,25 @@
 
         <p>
 
-            <a href="login.html">Login Again</a>
+            <a href="login.html">
+                Login Again
+            </a>
 
         </p>
 
         <p>
 
-            <a href="home.html">Go to Home Page</a>
+            <a href="Flexbox/home.html">
+                Go to Home Page
+            </a>
 
         </p>
 
         <p>
 
-            <a href="contactus.html">Contact Support</a>
+            <a href="contactus.html">
+                Contact Support
+            </a>
 
         </p>
 
@@ -76,13 +239,21 @@
 
         <ul align="left">
 
-            <li>Always keep your username and password confidential.</li>
+            <li>
+                Always keep your username and password confidential.
+            </li>
 
-            <li>Never share your login credentials with others.</li>
+            <li>
+                Never share your login credentials with others.
+            </li>
 
-            <li>Log out after every session, especially on public computers.</li>
+            <li>
+                Log out after every session, especially on public computers.
+            </li>
 
-            <li>Change your password regularly to keep your account secure.</li>
+            <li>
+                Change your password regularly to keep your account secure.
+            </li>
 
         </ul>
 
@@ -106,6 +277,14 @@
         </p>
 
     </center>
+
+
+    <!-- =========================================
+         COMMON PRACTICAL 4 JAVASCRIPT
+    ========================================== -->
+
+    <script src="scriptc.js"></script>
+
 
 </body>
 

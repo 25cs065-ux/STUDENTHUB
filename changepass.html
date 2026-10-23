@@ -5,39 +5,206 @@
 
     <title>Change Password - Student Hub</title>
 
+    <style>
+
+        /* =========================================
+           STUDENTHUB NAVIGATION
+        ========================================= */
+
+        #studentNavigation {
+            text-align: center;
+            padding: 15px;
+            border-bottom: 1px solid #ccc;
+        }
+
+        #menuButton,
+        #themeButton {
+            padding: 8px 12px;
+            margin: 5px;
+            cursor: pointer;
+            border: 1px solid #777;
+            background: white;
+        }
+
+        #navMenu {
+            margin-top: 12px;
+        }
+
+        #navMenu a {
+            margin: 8px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+
+        /* =========================================
+           DARK MODE
+        ========================================= */
+
+        body {
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        body.darkMode {
+            background: #121212;
+            color: #f1f1f1;
+        }
+
+        body.darkMode #studentNavigation {
+            background: #1e1e1e;
+            border-color: #444;
+        }
+
+        body.darkMode #navMenu {
+            background: #1e1e1e;
+        }
+
+        body.darkMode input {
+            background: #222;
+            color: white;
+            border: 1px solid #666;
+        }
+
+        body.darkMode a {
+            color: #8ab4f8;
+        }
+
+    </style>
+
 </head>
+
 
 <body>
 
-    <!-- Header -->
+
+    <!-- =========================================
+         STUDENTHUB NAVIGATION
+    ========================================== -->
+
+    <div id="studentNavigation">
+
+        <button
+            id="menuButton"
+            aria-expanded="false"
+            aria-controls="navMenu">
+
+            ☰ Menu
+
+        </button>
+
+
+        <button
+            id="themeButton"
+            aria-label="Toggle dark and light mode">
+
+            🌙 Dark Mode
+
+        </button>
+
+
+        <nav id="navMenu" hidden>
+
+            <a href="Flexbox/home.html">
+                Home
+            </a>
+
+            <a href="aboutus.html">
+                About Us
+            </a>
+
+            <a href="dashboard.html">
+                Dashboard
+            </a>
+
+            <a href="attendance.html">
+                Attendance
+            </a>
+
+            <a href="result.html">
+                Results
+            </a>
+
+            <a href="timetable.html">
+                Timetable
+            </a>
+
+            <a href="assignment.html">
+                Assignments
+            </a>
+
+            <a href="studymaterial.html">
+                Study Material
+            </a>
+
+            <a href="notice.html">
+                Notices
+            </a>
+
+            <a href="profile.html">
+                Profile
+            </a>
+
+            <a href="changepass.html">
+                Change Password
+            </a>
+
+            <a href="contactus.html">
+                Contact Us
+            </a>
+
+        </nav>
+
+    </div>
+
+
+    <!-- =========================================
+         ORIGINAL HEADER
+    ========================================== -->
 
     <table width="100%">
+
         <tr>
 
             <td>
-                <img src="logo.png" width="120" alt="Student Hub Logo">
+                <img
+                    src="logo.png"
+                    width="120"
+                    alt="Student Hub Logo">
             </td>
 
+
             <td align="right">
-                <a href="home.html">Home</a>
+
+                <a href="Flexbox/home.html">
+                    Home
+                </a>
+
             </td>
 
         </tr>
+
     </table>
 
+
     <hr>
+
 
     <center>
 
         <h1>Change Password</h1>
 
         <p>
-            <b>Update your account password to keep your Student Hub account secure.</b>
+            <b>
+                Update your account password to keep your
+                Student Hub account secure.
+            </b>
         </p>
 
     </center>
 
+
     <hr>
+
 
     <h2>Password Security</h2>
 
@@ -54,7 +221,9 @@
         to remember but difficult for others to guess.
     </p>
 
+
     <hr>
+
 
     <center>
 
@@ -67,40 +236,55 @@
                     <td>Current Password</td>
 
                     <td>
-                        <input type="password" required>
+                        <input
+                            type="password"
+                            required>
                     </td>
 
                 </tr>
+
 
                 <tr>
 
                     <td>New Password</td>
 
                     <td>
-                        <input type="password" required>
+                        <input
+                            type="password"
+                            required>
                     </td>
 
                 </tr>
+
 
                 <tr>
 
                     <td>Confirm New Password</td>
 
                     <td>
-                        <input type="password" required>
+                        <input
+                            type="password"
+                            required>
                     </td>
 
                 </tr>
 
+
                 <tr>
 
-                    <td colspan="2" align="center">
+                    <td
+                        colspan="2"
+                        align="center">
 
-                        <input type="submit" value="Change Password">
+                        <input
+                            type="submit"
+                            value="Change Password">
 
                         &nbsp;
 
-                        <input type="reset" value="Reset">
+                        <input
+                            type="reset"
+                            value="Reset">
 
                     </td>
 
@@ -112,45 +296,73 @@
 
     </center>
 
+
     <hr>
+
 
     <h2>Password Requirements</h2>
 
     <ul>
 
-        <li>Password should contain at least 8 characters.</li>
+        <li>
+            Password should contain at least 8 characters.
+        </li>
 
-        <li>Use a combination of uppercase and lowercase letters.</li>
+        <li>
+            Use a combination of uppercase and lowercase letters.
+        </li>
 
-        <li>Include at least one number.</li>
+        <li>
+            Include at least one number.
+        </li>
 
-        <li>Include at least one special character such as @, #, or !.</li>
+        <li>
+            Include at least one special character such as @, #, or !.
+        </li>
 
-        <li>Avoid using your name, date of birth, or phone number.</li>
+        <li>
+            Avoid using your name, date of birth, or phone number.
+        </li>
 
-        <li>Do not reuse old passwords.</li>
+        <li>
+            Do not reuse old passwords.
+        </li>
 
     </ul>
 
+
     <hr>
+
 
     <h2>Security Tips</h2>
 
     <ul>
 
-        <li>Never share your password with anyone.</li>
+        <li>
+            Never share your password with anyone.
+        </li>
 
-        <li>Do not save your password on public computers.</li>
+        <li>
+            Do not save your password on public computers.
+        </li>
 
-        <li>Always log out after using Student Hub.</li>
+        <li>
+            Always log out after using Student Hub.
+        </li>
 
-        <li>Change your password regularly for better security.</li>
+        <li>
+            Change your password regularly for better security.
+        </li>
 
-        <li>Report any suspicious activity to the system administrator.</li>
+        <li>
+            Report any suspicious activity to the system administrator.
+        </li>
 
     </ul>
 
+
     <hr>
+
 
     <h2>Important Note</h2>
 
@@ -160,7 +372,9 @@
         password before leaving this page.
     </p>
 
+
     <hr>
+
 
     <h2>Need Help?</h2>
 
@@ -170,13 +384,22 @@
         through the Contact Us page.
     </p>
 
-    <a href="contactus.html">Contact Support</a>
+
+    <a href="contactus.html">
+        Contact Support
+    </a>
+
 
     <br><br>
 
-    <a href="home.html">Back to Home</a>
+
+    <a href="Flexbox/home.html">
+        Back to Home
+    </a>
+
 
     <hr>
+
 
     <center>
 
@@ -189,6 +412,14 @@
         </p>
 
     </center>
+
+
+    <!-- =========================================
+         COMMON PRACTICAL 4 JAVASCRIPT
+    ========================================== -->
+
+    <script src="scriptc.js"></script>
+
 
 </body>
 

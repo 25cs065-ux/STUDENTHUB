@@ -1,0 +1,398 @@
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        background: #f2f4f7;
+        color: #263238;
+        margin: 0;
+        padding: 30px;
+        line-height: 1.6;
+    }
+
+    .container {
+        max-width: 650px;
+        margin: 30px auto;
+        background: white;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+        text-align: center;
+        color: #26384a;
+        margin-bottom: 5px;
+    }
+
+    h2 {
+        color: #26384a;
+        margin-top: 25px;
+    }
+
+    .description {
+        text-align: center;
+        color: #666;
+        margin-bottom: 25px;
+    }
+
+    .form-group {
+        margin-bottom: 18px;
+    }
+
+    label,
+    legend {
+        font-weight: bold;
+        display: block;
+        margin-bottom: 7px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="password"],
+    select {
+        width: 100%;
+        padding: 11px;
+        border: 1px solid #bbb;
+        border-radius: 5px;
+        font-size: 15px;
+    }
+
+    input:focus,
+    select:focus {
+        outline: 2px solid #567da5;
+        border-color: #567da5;
+    }
+
+    .error {
+        display: block;
+        color: #d93025;
+        font-size: 13px;
+        margin-top: 5px;
+        min-height: 18px;
+    }
+
+    .success {
+        color: #188038;
+        font-weight: bold;
+        text-align: center;
+        margin-top: 15px;
+    }
+
+    fieldset {
+        border: none;
+        padding: 0;
+        margin: 20px 0;
+    }
+
+    .gender-options {
+        display: flex;
+        gap: 25px;
+        margin-top: 10px;
+    }
+
+    .gender-options label {
+        font-weight: normal;
+    }
+
+    .terms {
+        margin: 20px 0;
+    }
+
+    .terms label {
+        font-weight: normal;
+    }
+
+    button {
+        width: 100%;
+        padding: 12px;
+        border: none;
+        border-radius: 5px;
+        background: #315b7d;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background 0.2s;
+    }
+
+    button:hover {
+        background: #244560;
+    }
+
+    button:focus {
+        outline: 3px solid #91b5d5;
+    }
+
+    a {
+        color: #315b7d;
+    }
+
+    a:hover {
+        color: #244560;
+    }
+
+    .container p {
+        overflow-wrap: anywhere;
+    }
+
+    /* Password strength */
+
+    .strength-container {
+        height: 8px;
+        background: #ddd;
+        border-radius: 5px;
+        margin-top: 8px;
+        overflow: hidden;
+    }
+
+    #strengthBar {
+        height: 100%;
+        width: 0%;
+        transition: width 0.3s;
+    }
+
+    .strength-text {
+        font-size: 13px;
+        margin: 5px 0;
+    }
+
+    /* Login and dashboard pages */
+
+    .dashboard-card {
+        margin-top: 20px;
+        padding: 18px;
+        background: #f5f8fb;
+        border: 1px solid #e0e7ef;
+        border-radius: 8px;
+    }
+
+    .dashboard-link {
+        display: inline-block;
+        margin: 8px 8px 8px 0;
+        padding: 10px 16px;
+        background: #315b7d;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+    }
+
+    .dashboard-link:hover {
+        background: #244560;
+        color: white;
+    }
+
+    /* Responsive design */
+
+    @media (max-width: 600px) {
+        body {
+            padding: 15px;
+        }
+
+        .container {
+            padding: 20px;
+            margin: 10px auto;
+        }
+
+        .gender-options {
+            flex-direction: column;
+            gap: 8px;
+        }
+    }
+/* Practical 11 - Student Management */
+
+.student-management {
+    max-width: 1200px;
+    margin: 30px auto;
+}
+
+.management-card {
+    background: #ffffff;
+    padding: 24px;
+    margin: 24px 0;
+    border: 1px solid #dbe4ee;
+    border-radius: 12px;
+    box-shadow: 0 4px 14px rgba(15, 23, 42, 0.06);
+}
+
+.student-form,
+.filter-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: center;
+}
+
+.student-form {
+    flex-direction: column;
+    align-items: stretch;
+    max-width: 600px;
+}
+
+.student-form label,
+.filter-form label {
+    font-weight: 600;
+    color: #243247;
+}
+
+.student-form input,
+.student-form select,
+.filter-form input,
+.filter-form select {
+    padding: 10px 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 7px;
+    font: inherit;
+    background: #fff;
+    max-width: 100%;
+}
+
+.student-form input:focus,
+.student-form select:focus,
+.filter-form input:focus,
+.filter-form select:focus {
+    outline: 2px solid #93c5fd;
+    border-color: #2563eb;
+}
+
+.student-form button,
+.filter-form button,
+.danger-button {
+    padding: 10px 16px;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    font: inherit;
+    font-weight: 600;
+}
+
+.student-form button,
+.filter-form button {
+    background: #1d4ed8;
+    color: #fff;
+}
+
+.student-form button:hover,
+.filter-form button:hover {
+    background: #1e40af;
+}
+
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.student-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 16px;
+    background: #fff;
+}
+
+.student-table th,
+.student-table td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #e2e8f0;
+    vertical-align: top;
+}
+
+.student-table th {
+    background: #eff6ff;
+    color: #1e3a5f;
+}
+
+.student-table tbody tr:nth-child(even) {
+    background: #f8fafc;
+}
+
+.student-table tbody tr:hover {
+    background: #f1f5f9;
+}
+
+.student-table a,
+.action-link {
+    color: #1d4ed8;
+    font-weight: 600;
+}
+
+.action-cell {
+    min-width: 120px;
+}
+
+.action-cell form {
+    display: inline-block;
+    margin-top: 6px;
+}
+
+.danger-button {
+    background: #b91c1c;
+    color: #fff;
+}
+
+.danger-button:hover {
+    background: #991b1b;
+}
+
+.status-label {
+    display: inline-block;
+    padding: 4px 9px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.status-label.active {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.status-label.inactive {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+.notice-message {
+    padding: 13px 16px;
+    margin: 16px 0;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+.notice-message.success {
+    background: #dcfce7;
+    color: #166534;
+    border: 1px solid #86efac;
+}
+
+.notice-message.error {
+    background: #fee2e2;
+    color: #991b1b;
+    border: 1px solid #fca5a5;
+}
+
+@media (max-width: 650px) {
+    .management-card {
+        padding: 14px;
+    }
+
+    .filter-form {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .filter-form input,
+    .filter-form select,
+    .filter-form button {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .student-table th,
+    .student-table td {
+        padding: 8px;
+        font-size: 13px;
+    }
+}
+

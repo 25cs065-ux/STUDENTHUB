@@ -5,27 +5,266 @@
 
     <title>Assignments - Student Hub</title>
 
+    <style>
+
+        /* =========================================
+           STUDENTHUB NAVIGATION
+        ========================================= */
+
+        #studentNavigation {
+            text-align: center;
+            padding: 15px;
+            border-bottom: 1px solid #ccc;
+        }
+
+        #menuButton,
+        #themeButton {
+            padding: 8px 12px;
+            margin: 5px;
+            cursor: pointer;
+            border: 1px solid #777;
+            background: white;
+        }
+
+        #navMenu {
+            margin-top: 12px;
+        }
+
+        #navMenu a {
+            margin: 8px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+
+        /* =========================================
+           NOTIFICATION BANNER
+        ========================================= */
+
+        #notification {
+            background: #333;
+            color: white;
+            padding: 12px;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        #closeNotification {
+            margin-left: 15px;
+            padding: 5px 10px;
+            border: none;
+            cursor: pointer;
+            background: white;
+            color: #333;
+            font-weight: bold;
+        }
+
+        #closeNotification:hover {
+            background: #ddd;
+        }
+
+
+        /* =========================================
+           DARK MODE
+        ========================================= */
+
+        body.darkMode {
+            background: #121212;
+            color: #f1f1f1;
+        }
+
+        body.darkMode a {
+            color: #8ab4f8;
+        }
+
+        body.darkMode #studentNavigation {
+            background: #1e1e1e;
+            border-color: #444;
+        }
+
+        body.darkMode #navMenu {
+            background: #1e1e1e;
+        }
+
+        body.darkMode table {
+            background: #1e1e1e;
+            color: #f1f1f1;
+        }
+
+        body.darkMode th {
+            background: #333;
+        }
+
+        body.darkMode td,
+        body.darkMode th {
+            border-color: #666;
+        }
+
+        body.darkMode #notification {
+            background: #222;
+            color: #f1f1f1;
+        }
+
+        body.darkMode #closeNotification {
+            background: #f1f1f1;
+            color: #222;
+        }
+
+    </style>
+
 </head>
+
 
 <body>
 
-    <!-- Header -->
+
+    <!-- =========================================
+         NOTIFICATION BANNER
+         THIS EXISTS ONLY ON ASSIGNMENT PAGE
+    ========================================== -->
+
+    <div
+        id="notification"
+        role="status"
+        aria-live="polite">
+
+        📢 New assignment information is available.
+        Please check the assignment details and deadlines.
+
+        <button
+            id="closeNotification"
+            type="button"
+            aria-label="Close notification">
+
+            X
+
+        </button>
+
+    </div>
+
+
+
+    <!-- =========================================
+         STUDENTHUB NAVIGATION
+    ========================================== -->
+
+    <div id="studentNavigation">
+
+        <button
+            id="menuButton"
+            type="button"
+            aria-expanded="false"
+            aria-controls="navMenu">
+
+            ☰ Menu
+
+        </button>
+
+
+        <button
+            id="themeButton"
+            type="button"
+            aria-label="Toggle dark and light mode">
+
+            🌙 Dark Mode
+
+        </button>
+
+
+        <nav id="navMenu" hidden>
+
+            <a href="Flexbox/home.html">
+                Home
+            </a>
+
+            <a href="aboutus.html">
+                About Us
+            </a>
+
+            <a href="dashboard.html">
+                Dashboard
+            </a>
+
+            <a href="attendance.html">
+                Attendance
+            </a>
+
+            <a href="result.html">
+                Results
+            </a>
+
+            <a href="timetable.html">
+                Timetable
+            </a>
+
+            <a href="assignment.html">
+                Assignments
+            </a>
+
+            <a href="studymaterial.html">
+                Study Material
+            </a>
+
+            <a href="notice.html">
+                Notices
+            </a>
+
+            <a href="profile.html">
+                Profile
+            </a>
+
+            <a href="changepass.html">
+                Change Password
+            </a>
+
+            <a href="contactus.html">
+                Contact Us
+            </a>
+
+        </nav>
+
+    </div>
+
+
+
+    <!-- =========================================
+         ORIGINAL HEADER
+    ========================================== -->
 
     <table width="100%">
+
         <tr>
 
             <td>
-                <img src="logo.png" width="120" alt="Student Hub Logo">
+
+                <img
+                    src="logo.png"
+                    width="120"
+                    alt="Student Hub Logo">
+
             </td>
 
+
             <td align="right">
-                <a href="home.html">Home</a>
+
+                <a href="Flexbox/home.html">
+                    Home
+                </a>
+
             </td>
 
         </tr>
+
     </table>
 
+
     <hr>
+
+
+
+    <!-- =========================================
+         ORIGINAL ASSIGNMENT CONTENT
+    ========================================== -->
 
     <center>
 
@@ -37,7 +276,9 @@
 
     </center>
 
+
     <hr>
+
 
     <h2>Assignment Overview</h2>
 
@@ -56,7 +297,9 @@
         assigned work and important updates.
     </p>
 
+
     <hr>
+
 
     <h2>Current Assignments</h2>
 
@@ -76,6 +319,7 @@
 
         </tr>
 
+
         <tr>
 
             <td>Programming with C++</td>
@@ -89,6 +333,7 @@
             <td>Pending</td>
 
         </tr>
+
 
         <tr>
 
@@ -104,6 +349,7 @@
 
         </tr>
 
+
         <tr>
 
             <td>Digital Electronics</td>
@@ -118,6 +364,7 @@
 
         </tr>
 
+
         <tr>
 
             <td>Engineering Physics</td>
@@ -131,6 +378,7 @@
             <td>Pending</td>
 
         </tr>
+
 
         <tr>
 
@@ -148,27 +396,43 @@
 
     </table>
 
+
     <hr>
+
 
     <h2>Submission Guidelines</h2>
 
     <ul>
 
-        <li>Read the assignment instructions carefully before starting.</li>
+        <li>
+            Read the assignment instructions carefully before starting.
+        </li>
 
-        <li>Submit your work before the specified deadline.</li>
+        <li>
+            Submit your work before the specified deadline.
+        </li>
 
-        <li>Use the prescribed file format if required.</li>
+        <li>
+            Use the prescribed file format if required.
+        </li>
 
-        <li>Ensure your assignment is your own original work.</li>
+        <li>
+            Ensure your assignment is your own original work.
+        </li>
 
-        <li>Review your answers before final submission.</li>
+        <li>
+            Review your answers before final submission.
+        </li>
 
-        <li>Keep a backup copy of your assignment.</li>
+        <li>
+            Keep a backup copy of your assignment.
+        </li>
 
     </ul>
 
+
     <hr>
+
 
     <h2>Assignment Status Summary</h2>
 
@@ -186,6 +450,7 @@
 
         </tr>
 
+
         <tr>
 
             <td>5</td>
@@ -200,7 +465,9 @@
 
     </table>
 
+
     <hr>
+
 
     <h2>Important Instructions</h2>
 
@@ -217,7 +484,9 @@
         practical application and independent learning.
     </p>
 
+
     <hr>
+
 
     <h2>Need Help?</h2>
 
@@ -227,22 +496,42 @@
         faculty member or visit the Contact Us page for technical support.
     </p>
 
-    <a href="contactus.html">Contact Support</a>
+
+    <a href="contactus.html">
+        Contact Support
+    </a>
+
 
     <br><br>
 
-    <a href="home.html">Back to Home</a>
+
+    <a href="Flexbox/home.html">
+        Back to Home
+    </a>
+
 
     <hr>
+
 
     <center>
 
         <p>
+
             <b>Student Hub</b><br>
+
             Making Assignment Management Easy
+
         </p>
 
     </center>
+
+
+    <!-- =========================================
+         COMMON PRACTICAL 4 JAVASCRIPT
+    ========================================== -->
+
+    <script src="scriptc.js"></script>
+
 
 </body>
 

@@ -5,27 +5,275 @@
 
     <title>Contact Us - Student Hub</title>
 
+    <style>
+
+        /* =========================================
+           STUDENTHUB NAVIGATION
+        ========================================= */
+
+        #studentNavigation {
+            text-align: center;
+            padding: 15px;
+            border-bottom: 1px solid #ccc;
+        }
+
+        #menuButton,
+        #themeButton {
+            padding: 8px 12px;
+            margin: 5px;
+            cursor: pointer;
+            border: 1px solid #777;
+            background: white;
+        }
+
+        #navMenu {
+            margin-top: 12px;
+        }
+
+        #navMenu a {
+            margin: 8px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+
+        /* =========================================
+           NOTIFICATION
+        ========================================= */
+
+        #notification {
+            background: #333;
+            color: white;
+            padding: 12px;
+            text-align: center;
+        }
+
+        #closeNotification {
+            margin-left: 15px;
+            padding: 4px 10px;
+            cursor: pointer;
+            border: none;
+        }
+
+
+        /* =========================================
+           FAQ
+        ========================================= */
+
+        .faqQuestion {
+            width: 100%;
+            text-align: left;
+            padding: 15px;
+            margin-top: 8px;
+            cursor: pointer;
+            border: 1px solid #ccc;
+            background: #f5f5f5;
+            font-weight: bold;
+        }
+
+        .faqAnswer {
+            display: none;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-top: none;
+        }
+
+        .faqAnswer.open {
+            display: block;
+        }
+
+
+        /* =========================================
+           DARK MODE
+        ========================================= */
+
+        body.darkMode {
+            background: #121212;
+            color: #f1f1f1;
+        }
+
+        body.darkMode a {
+            color: #8ab4f8;
+        }
+
+        body.darkMode #studentNavigation {
+            background: #1e1e1e;
+            border-color: #444;
+        }
+
+        body.darkMode #navMenu {
+            background: #1e1e1e;
+        }
+
+        body.darkMode .faqQuestion {
+            background: #222;
+            color: white;
+            border-color: #555;
+        }
+
+        body.darkMode .faqAnswer {
+            background: #1e1e1e;
+            border-color: #555;
+        }
+
+        body.darkMode input,
+        body.darkMode textarea {
+            background: #222;
+            color: white;
+            border: 1px solid #666;
+        }
+
+        body.darkMode table {
+            color: white;
+        }
+
+    </style>
+
 </head>
+
 
 <body>
 
-    <!-- Header -->
+
+    <!-- =========================================
+         PRACTICAL 4 - NOTIFICATION BANNER
+    ========================================== -->
+
+    <div
+        id="notification"
+        role="status">
+
+        📢 Student Hub Support is available
+        for your queries.
+
+        <button
+            id="closeNotification"
+            aria-label="Close notification">
+
+            X
+
+        </button>
+
+    </div>
+
+
+    <!-- =========================================
+         STUDENTHUB NAVIGATION
+    ========================================== -->
+
+    <div id="studentNavigation">
+
+        <button
+            id="menuButton"
+            aria-expanded="false"
+            aria-controls="navMenu">
+
+            ☰ Menu
+
+        </button>
+
+
+        <button
+            id="themeButton"
+            aria-label="Toggle dark and light mode">
+
+            🌙 Dark Mode
+
+        </button>
+
+
+        <nav id="navMenu" hidden>
+
+            <a href="Flexbox/home.html">
+                Home
+            </a>
+
+            <a href="aboutus.html">
+                About Us
+            </a>
+
+            <a href="dashboard.html">
+                Dashboard
+            </a>
+
+            <a href="attendance.html">
+                Attendance
+            </a>
+
+            <a href="result.html">
+                Results
+            </a>
+
+            <a href="timetable.html">
+                Timetable
+            </a>
+
+            <a href="assignment.html">
+                Assignments
+            </a>
+
+            <a href="studymaterial.html">
+                Study Material
+            </a>
+
+            <a href="notice.html">
+                Notices
+            </a>
+
+            <a href="profile.html">
+                Profile
+            </a>
+
+            <a href="changepass.html">
+                Change Password
+            </a>
+
+            <a href="contactus.html">
+                Contact Us
+            </a>
+
+        </nav>
+
+    </div>
+
+
+    <!-- =========================================
+         ORIGINAL HEADER
+    ========================================== -->
 
     <table width="100%">
+
         <tr>
 
             <td>
-                <img src="logo.png" width="120" alt="Student Hub Logo">
+
+                <img
+                    src="logo.png"
+                    width="120"
+                    alt="Student Hub Logo">
+
             </td>
 
+
             <td align="right">
-                <a href="home.html">Home</a>
+
+                <a href="Flexbox/home.html">
+                    Home
+                </a>
+
             </td>
 
         </tr>
+
     </table>
 
+
     <hr>
+
+
+    <!-- =========================================
+         CONTACT PAGE INTRODUCTION
+    ========================================== -->
 
     <center>
 
@@ -36,24 +284,35 @@
         </p>
 
         <p>
+
             If you have any questions regarding your Student Hub account,
             attendance, assignments, examination results, study materials,
             timetable, or any technical issues, please contact us using the
             form below. Our support team will review your query and respond
             as soon as possible.
+
         </p>
 
     </center>
 
+
     <hr>
+
+
+    <!-- =========================================
+         CONTACT FORM
+    ========================================== -->
 
     <h2>Send Us a Message</h2>
 
     <p>
+
         Please complete the following form with accurate information so
         that we can understand your concern and provide appropriate
         assistance.
+
     </p>
+
 
     <form action="thankyou.html">
 
@@ -65,14 +324,16 @@
 
                 <td>
 
-                    <input type="text"
-                           name="fullname"
-                           placeholder="Enter your full name"
-                           required>
+                    <input
+                        type="text"
+                        name="fullname"
+                        placeholder="Enter your full name"
+                        required>
 
                 </td>
 
             </tr>
+
 
             <tr>
 
@@ -80,14 +341,16 @@
 
                 <td>
 
-                    <input type="email"
-                           name="email"
-                           placeholder="Enter your email address"
-                           required>
+                    <input
+                        type="email"
+                        name="email"
+                        placeholder="Enter your email address"
+                        required>
 
                 </td>
 
             </tr>
+
 
             <tr>
 
@@ -95,13 +358,15 @@
 
                 <td>
 
-                    <input type="tel"
-                           name="phone"
-                           placeholder="Enter your phone number">
+                    <input
+                        type="tel"
+                        name="phone"
+                        placeholder="Enter your phone number">
 
                 </td>
 
             </tr>
+
 
             <tr>
 
@@ -109,14 +374,16 @@
 
                 <td>
 
-                    <input type="text"
-                           name="subject"
-                           placeholder="Enter the subject"
-                           required>
+                    <input
+                        type="text"
+                        name="subject"
+                        placeholder="Enter the subject"
+                        required>
 
                 </td>
 
             </tr>
+
 
             <tr>
 
@@ -135,15 +402,22 @@
 
             </tr>
 
+
             <tr>
 
-                <td colspan="2" align="center">
+                <td
+                    colspan="2"
+                    align="center">
 
-                    <input type="submit" value="Send Message">
+                    <input
+                        type="submit"
+                        value="Send Message">
 
                     &nbsp;
 
-                    <input type="reset" value="Clear Form">
+                    <input
+                        type="reset"
+                        value="Clear Form">
 
                 </td>
 
@@ -153,7 +427,13 @@
 
     </form>
 
+
     <hr>
+
+
+    <!-- =========================================
+         CONTACT INFORMATION
+    ========================================== -->
 
     <h2>Contact Information</h2>
 
@@ -174,6 +454,7 @@
     </p>
 
     <p>
+
         <b>Address:</b><br>
 
         Student Hub Support Office<br>
@@ -186,11 +467,19 @@
 
     </p>
 
+
     <hr>
+
+
+    <!-- =========================================
+         SUPPORT HOURS
+    ========================================== -->
 
     <h2>Support Hours</h2>
 
-    <table border="1" cellpadding="8">
+    <table
+        border="1"
+        cellpadding="8">
 
         <tr>
 
@@ -200,6 +489,7 @@
 
         </tr>
 
+
         <tr>
 
             <td>Monday - Friday</td>
@@ -208,6 +498,7 @@
 
         </tr>
 
+
         <tr>
 
             <td>Saturday</td>
@@ -215,6 +506,7 @@
             <td>9:00 AM - 1:00 PM</td>
 
         </tr>
+
 
         <tr>
 
@@ -226,97 +518,221 @@
 
     </table>
 
+
     <hr>
+
+
+    <!-- =========================================
+         WHEN SHOULD YOU CONTACT US?
+    ========================================== -->
 
     <h2>When Should You Contact Us?</h2>
 
     <ul>
 
-        <li>Unable to log in to your Student Hub account.</li>
+        <li>
+            Unable to log in to your Student Hub account.
+        </li>
 
-        <li>Password reset or account recovery.</li>
+        <li>
+            Password reset or account recovery.
+        </li>
 
-        <li>Attendance record discrepancies.</li>
+        <li>
+            Attendance record discrepancies.
+        </li>
 
-        <li>Assignment submission problems.</li>
+        <li>
+            Assignment submission problems.
+        </li>
 
-        <li>Result or grade-related queries.</li>
+        <li>
+            Result or grade-related queries.
+        </li>
 
-        <li>Study material download issues.</li>
+        <li>
+            Study material download issues.
+        </li>
 
-        <li>Technical problems with the Student Hub portal.</li>
+        <li>
+            Technical problems with the Student Hub portal.
+        </li>
 
-        <li>General questions or suggestions.</li>
+        <li>
+            General questions or suggestions.
+        </li>
 
     </ul>
 
+
     <hr>
+
+
+    <!-- =========================================
+         PRACTICAL 4 - COLLAPSIBLE FAQ
+    ========================================== -->
 
     <h2>Frequently Asked Questions</h2>
 
-    <p>
-        <b>Q. How long does it take to receive a reply?</b>
-    </p>
 
-    <p>
-        Most queries are answered within 24 to 48 working hours.
-    </p>
+    <!-- FAQ 1 -->
 
-    <p>
-        <b>Q. What should I do if I forget my password?</b>
-    </p>
+    <button
+        class="faqQuestion"
+        aria-expanded="false">
 
-    <p>
-        Visit the Change Password page or contact the support team for
-        assistance.
-    </p>
+        Q. How long does it take to receive a reply?
 
-    <p>
-        <b>Q. Can I report incorrect attendance or results?</b>
-    </p>
+    </button>
 
-    <p>
-        Yes. Please contact your faculty member or submit your concern
-        through the contact form.
-    </p>
+
+    <div class="faqAnswer">
+
+        <p>
+
+            Most queries are answered within
+            24 to 48 working hours.
+
+        </p>
+
+    </div>
+
+
+    <!-- FAQ 2 -->
+
+    <button
+        class="faqQuestion"
+        aria-expanded="false">
+
+        Q. What should I do if I forget my password?
+
+    </button>
+
+
+    <div class="faqAnswer">
+
+        <p>
+
+            Visit the Change Password page or
+            contact the support team for assistance.
+
+        </p>
+
+    </div>
+
+
+    <!-- FAQ 3 -->
+
+    <button
+        class="faqQuestion"
+        aria-expanded="false">
+
+        Q. Can I report incorrect attendance or results?
+
+    </button>
+
+
+    <div class="faqAnswer">
+
+        <p>
+
+            Yes. Please contact your faculty member
+            or submit your concern through the
+            contact form.
+
+        </p>
+
+    </div>
+
+
+    <!-- FAQ 4 -->
+
+    <button
+        class="faqQuestion"
+        aria-expanded="false">
+
+        Q. Can I contact Student Hub for technical issues?
+
+    </button>
+
+
+    <div class="faqAnswer">
+
+        <p>
+
+            Yes. You can use the contact form above
+            to report technical issues related to
+            the Student Hub portal.
+
+        </p>
+
+    </div>
+
 
     <hr>
+
+
+    <!-- =========================================
+         ABOUT STUDENT HUB
+    ========================================== -->
 
     <h2>About Student Hub</h2>
 
     <p>
+
         Student Hub is an online academic management system that provides
         students with quick access to attendance records, examination
         results, assignments, notices, study materials, profiles, and
         class timetables through a single secure platform.
+
     </p>
 
     <p>
+
         Our goal is to simplify academic management, improve communication,
         and make important educational information available anytime and
         anywhere.
+
     </p>
 
-    <a href="aboutus.html">Read More About Student Hub</a>
+
+    <a href="aboutus.html">
+        Read More About Student Hub
+    </a>
+
 
     <hr>
 
+
+    <!-- =========================================
+         THANK YOU
+    ========================================== -->
+
     <center>
 
-        <h3>Thank You for Contacting Student Hub</h3>
+        <h3>
+            Thank You for Contacting Student Hub
+        </h3>
 
         <p>
-            We appreciate your feedback and are committed to providing
-            timely support and quality service to all students.
+
+            We appreciate your feedback and are committed
+            to providing timely support and quality service
+            to all students.
+
         </p>
 
         <br>
 
-        <a href="home.html">Back to Home</a>
+        <a href="Flexbox/home.html">
+            Back to Home
+        </a>
 
     </center>
 
+
     <hr>
+
 
     <center>
 
@@ -329,6 +745,14 @@
         </p>
 
     </center>
+
+
+    <!-- =========================================
+         COMMON PRACTICAL 4 JAVASCRIPT
+    ========================================== -->
+
+    <script src="scriptc.js"></script>
+
 
 </body>
 

@@ -1,0 +1,14 @@
+[
+    {
+        "id": 1,
+        "question": "How can I check my attendance?",
+        "answer": "You can check your attendance from the Attendance section.",
+        "category": "Attendance"
+    },
+    {
+        "id": 2,
+        "question": "How can I download study material?",
+        "answer": "Open the Study Material section and select the required subject.",
+        "category": "Study Material"
+    }
+]

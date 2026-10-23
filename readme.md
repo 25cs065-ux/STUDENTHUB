@@ -1,173 +1,123 @@
-#STUDENTHUB
+# StudentHub Portal
 
-## Project Overview
+A secure, role-based student management portal built with PHP and MySQL (XAMPP).
+Students register, log in, and sign up for campus events. Administrators manage
+student records and events.
 
-Student Hub is a web-based student portal developed as part of a college web development project. The website is designed to provide students with a centralized platform where they can access academic information, personal details, study resources, and important college updates.
+**Author:** YOUR-NAME (ENROLLMENT-NO)
+**Repository:** https://github.com/YOUR-USERNAME/studenthub
 
-The project is developed using manual HTML, CSS, and JavaScript without AI-generated code, following the project guidelines.
+## Objective
 
----
+To design and develop a secure, role-based student management web application
+using PHP and MySQL. The system supports student registration and login,
+administrator management of student records (view, add, edit, deactivate,
+export) and events, and student registration for events, with secure
+authentication, session management, input validation, audit logging and a
+responsive, accessible interface.
 
-# Website Navigation (Site Flow)
+## Features
+
+**Guest:** home page, register, login.
+**Student:** dashboard, browse events, register/cancel event registration, timetable, logout.
+**Admin:** dashboard with live counts, manage students (search, filter, add, edit,
+deactivate, CSV export), manage events (create/edit/delete with poster upload),
+Fetch API based events page, audit log.
+
+## Tech Stack
+
+PHP 8, MySQL/MariaDB, HTML5, CSS3, JavaScript (Fetch API), Bootstrap 5 (admin dashboard), XAMPP.
+
+## Setup
+
+1. Install XAMPP and start **Apache** and **MySQL**.
+2. Copy this project folder to `C:\xampp\htdocs\STUDENTHUB`.
+3. Open http://localhost/phpmyadmin, click **New**, create a database named `studenthub`
+   (collation `utf8mb4_general_ci`).
+4. Select `studenthub` → **Import** → choose `studenthub.sql` → **Import**.
+5. Check `db.php`: host `localhost`, user `root`, empty password, database `studenthub`.
+6. In `C:\xampp\php\php.ini` set these and restart Apache:
+   ```
+   session.cookie_httponly = 1
+   session.cookie_samesite = "Lax"
+   session.use_strict_mode = 1
+   session.use_only_cookies = 1
+   ```
+7. Open http://localhost/STUDENTHUB/
+
+## Demo Accounts
+
+| Role | Email | Password |
+|---|---|---|
+| Admin | admin@studenthub.test | Admin@12345 |
+| Student | student@studenthub.test | Student@12345 |
+
+## Main URLs
+
+| Page | URL |
+|---|---|
+| Login | /STUDENTHUB/login.php |
+| Register | /STUDENTHUB/register.html |
+| Student dashboard | /STUDENTHUB/student_dashboard.php |
+| Student events | /STUDENTHUB/student_events.php |
+| Admin dashboard | /STUDENTHUB/admin_dashboard.php |
+| Manage students | /STUDENTHUB/manage_students.php |
+| Manage events | /STUDENTHUB/events.php |
+| Fetch API events | /STUDENTHUB/events_fetch.html |
+
+## Folder Structure
 
 ```
-Home
-│
-├── About Us
-├── Contact Us
-├── Login
-│     │
-│     └── Dashboard
-│            ├── Profile
-│            ├── Attendance
-│            ├── Results
-│            ├── Timetable
-│            ├── Assignments
-│            ├── Study Material
-│            ├── Notices
-│            ├── Change Password
-│            └── Logout
-└── Register
+STUDENTHUB/
+├── index.php                  entry point (redirects to login/dashboard)
+├── db.php                     database connection
+├── audit.php                  audit log helper
+├── login.php, authenticate.php, logout.php, timeout.php
+├── register.html, process_register.php, script.js
+├── dashboard.php, student_dashboard.php, student_events.php
+├── admin_dashboard.php, manage_students.php, edit_student.php,
+│   delete_student.php, export_students.php
+├── events.php, events_db.php, save_event.php, delete_event.php
+├── api.php, events_fetch.html, practical13.js   (JSON API + Fetch CRUD)
+├── session_test.php           session ID regeneration demo
+├── style.css, flexbox/        styles and home page
+├── uploads/events/            event posters (.htaccess blocks script execution)
+└── studenthub.sql             database dump
 ```
 
----
+## Security Features
 
-# Available Pages
+- Passwords hashed with `password_hash` / `password_verify`
+- Prepared statements (MySQLi) for all database queries (SQL injection)
+- Output escaping with `htmlspecialchars` (XSS)
+- CSRF tokens on all state-changing forms and on the JSON API
+- Role-based access control on every protected page (Admin / Student)
+- Session ID regeneration on login, 15-minute inactivity timeout, full session destroy on logout
+- Login lock after 5 failed attempts (5 minutes) and inactive accounts blocked
+- Server-side validation of every form (client-side validation is only a convenience)
+- Poster upload checks: size limit, MIME type, `getimagesize`, random file names,
+  PHP execution blocked in `uploads/`
+- Audit log of logins, logouts, student/event changes, exports and event registrations
+- Soft delete for students (status set to inactive, record kept)
 
-1. Home
-2. About Us
-3. Contact Us
-4. Login
-5. Register
-6. Dashboard
-7. Profile
-8. Attendance
-9. Results
-10. Timetable
-11. Assignments
-12. Study Material
-13. Notices
-14. Change Password
-15. Logout
+## Testing
 
----
+See `Test_and_Security_Report` for the full test cases, security checklist and
+accessibility checklist. Quick manual test:
 
-# User Flow
+1. Register a new student, log in, register for an event.
+2. Log in as admin, check the dashboard counts and Latest Registrations.
+3. Add, edit and deactivate a student; export the CSV.
+4. Try a student opening `admin_dashboard.php` (expect 403).
+5. Try SQL injection text in the login password and search box (expect no effect).
 
-### New User
+## Known Limitations
 
-Home → Register → Login → Dashboard → Access Student Services
+- Runs on HTTP in local XAMPP; production use needs HTTPS and the `Secure` cookie flag.
+- Login lock is session-based, so a production system should also rate-limit by IP/account.
+- No email verification or password reset flow.
+- `readme` pages for attendance, results and notices are static HTML placeholders from earlier practicals.
 
-### Existing User
+## Screenshots
 
-Home → Login → Dashboard → Required Module → Logout
-
----
-
-# Website Features
-
-* Student Login
-* New Student Registration
-* Personal Profile
-* Attendance Tracking
-* Semester Results
-* Timetable
-* Assignment Information
-* Study Material Download
-* College Notices
-* Password Change
-* Secure Logout
-
----
-
-# User Roles and Access
-
-## 1. Guest (Visitor)
-
-**Can Access**
-
-* Home
-* About Us
-* Contact Us
-* Register
-* Login
-
-**Cannot Access**
-
-* Dashboard
-* Student Records
-* Attendance
-* Results
-* Assignments
-* Study Material
-
----
-
-## 2. Student
-
-**Can Access**
-
-* Dashboard
-* Profile
-* Attendance
-* Results
-* Timetable
-* Assignments
-* Study Material
-* Notices
-* Change Password
-* Logout
-
----
-
-## 3. Administrator (Optional)
-
-If implemented in the future, the administrator can:
-
-* Manage student accounts
-* Upload study material
-* Publish notices
-* Update attendance
-* Upload examination results
-* Manage timetables
-* Manage assignments
-
----
-
-# Technologies Used
-
-* HTML5
-* CSS3
-* JavaScript
-* Figma (Website Planning & Sitemap)
-
----
-
-# Objective
-
-The objective of Student Hub is to provide students with a simple, organized, and user-friendly platform where they can access all important academic information from a single website.
-
----
-
-# Future Enhancements
-
-* Online Fee Payment
-* Faculty Dashboard
-* Course Registration
-* Event Management
-* Online Quiz Portal
-* Chat Support
-* Notifications
-* Mobile Responsive Design
-* Dark Mode
-* Student Discussion Forum
-
----
-
-# Project Status
-
-Current Phase: Planning (Sitemap and Wireframe)
-
-Next Phase: UI Design in Figma
-
-Final Phase: Website Development using HTML, CSS, and JavaScript.
+Stored in the `screenshots/` folder (see the report for the numbered list).

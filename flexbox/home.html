@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Student Hub</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+
+        /* =========================================
+           PRACTICAL 4 - EXTRA STYLES FOR HOME PAGE
+        ========================================= */
+
+        body {
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+
+      
+
+
+        /* ---------- Navigation ---------- */
+
+        #studentNavigation {
+            text-align: center;
+            padding: 15px;
+            border-bottom: 1px solid #ccc;
+        }
+
+        #studentNavigation a {
+            margin: 8px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        #menuButton,
+        #themeButton {
+            padding: 8px 12px;
+            margin: 5px;
+            cursor: pointer;
+            border: 1px solid #777;
+            background: white;
+        }
+
+        #navMenu {
+            margin-top: 10px;
+        }
+
+        #navMenu.open {
+            display: block;
+        }
+
+
+    
+
+        /* ---------- FAQ ---------- */
+
+        .faqQuestion {
+            width: 100%;
+            text-align: left;
+            padding: 15px;
+            margin-top: 8px;
+            cursor: pointer;
+            border: 1px solid #ccc;
+            background: #f5f5f5;
+            font-weight: bold;
+        }
+
+        .faqAnswer {
+            display: none;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-top: none;
+        }
+
+        .faqAnswer.open {
+            display: block;
+        }
+
+
+        /* ---------- Dark Mode ---------- */
+
+        body.darkMode {
+            background: #121212;
+            color: #f1f1f1;
+        }
+
+        body.darkMode a {
+            color: #8ab4f8;
+        }
+
+        body.darkMode #studentNavigation {
+            background: #1e1e1e;
+            border-color: #444;
+        }
+
+      
+
+        body.darkMode .faqQuestion {
+            background: #222;
+            color: white;
+            border-color: #555;
+        }
+
+        body.darkMode .faqAnswer {
+            background: #1e1e1e;
+            border-color: #555;
+        }
+
+      
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+
+
+
+    <!-- =========================================
+         PRACTICAL 4 - NAVIGATION
+    ========================================== -->
+
+    <div id="studentNavigation">
+
+        <button
+            id="menuButton"
+            aria-expanded="false"
+            aria-controls="navMenu">
+            ☰ Menu
+        </button>
+
+
+        <button
+            id="themeButton"
+            aria-label="Toggle dark and light mode">
+            🌙 Dark Mode
+        </button>
+
+
+        <nav id="navMenu" hidden>
+
+            <a href="../login.html">Login</a>
+
+            <a href="../register.html">Sign Up</a>
+
+            <a href="../dashboard.html">Dashboard</a>
+
+            <a href="../attendance.html">Attendance</a>
+
+            <a href="../result.html">Results</a>
+
+            <a href="../timetable.html">Timetable</a>
+
+            <a href="../assignment.html">Assignments</a>
+
+            <a href="../studymaterial.html">
+                Study Material
+            </a>
+
+            <a href="../notice.html">Notices</a>
+
+            <a href="../profile.html">Profile</a>
+
+            <a href="../changepass.html">
+                Change Password
+            </a>
+
+            <a href="../contactus.html">
+                Contact Us
+            </a>
+
+        </nav>
+
+    </div>
+
+
+
+    <!-- =========================================
+         ORIGINAL HEADER
+    ========================================== -->
+
+    <table width="100%">
+
+        <tr>
+
+            <td>
+
+                <img
+                    src="logo.png"
+                    width="120"
+                    alt="Student Hub Logo">
+
+            </td>
+
+
+            <td align="center">
+
+                <h1 style="font-size: 65px;">
+                    STUDENT HUB
+                </h1>
+
+            </td>
+
+
+            <td align="right">
+
+                <a href="../login.html">
+                    Login
+                </a>
+
+                &nbsp;
+
+                <a href="../register.html">
+                    Sign Up
+                </a>
+
+            </td>
+
+        </tr>
+
+    </table>
+
+
+    <hr>
+
+
+    <!-- =========================================
+         ORIGINAL BANNER
+    ========================================== -->
+
+    <center>
+
+        <img
+            src="banner.png"
+            width="3000"
+            height="400"
+            alt="Student Hub Banner">
+
+    </center>
+
+
+    <hr>
+
+
+
+    <!-- =========================================
+         PRACTICAL 4 - CONTENT SLIDER
+    ========================================== -->
+
+
+
+
+
+    <!-- =========================================
+         ORIGINAL WELCOME SECTION
+    ========================================== -->
+
+    <center>
+
+        <h1>Welcome to Student Hub</h1>
+
+        <p>
+
+            Student Hub is your one-stop academic
+            management portal where students can access
+            all important educational information through
+            a single platform. It helps students stay
+            organized, informed, and connected with their
+            academic activities.
+
+        </p>
+
+    </center>
+
+
+    <hr>
+
+
+
+    <!-- =========================================
+         ORIGINAL QUICK NAVIGATION
+    ========================================== -->
+
+    <h2>Quick Navigation</h2>
+
+    <p>Select any module below to continue.</p>
+
+
+    <ul>
+
+        <li>
+            <a href="../dashboard.html">
+                Dashboard
+            </a>
+        </li>
+
+        <li>
+            <a href="../attendance.html">
+                Attendance
+            </a>
+        </li>
+
+        <li>
+            <a href="../result.html">
+                Results
+            </a>
+        </li>
+
+        <li>
+            <a href="../timetable.html">
+                Timetable
+            </a>
+        </li>
+
+        <li>
+            <a href="../assignment.html">
+                Assignments
+            </a>
+        </li>
+
+        <li>
+            <a href="../studymaterial.html">
+                Study Material
+            </a>
+        </li>
+
+        <li>
+            <a href="../notice.html">
+                Notices
+            </a>
+        </li>
+
+        <li>
+            <a href="../profile.html">
+                Profile
+            </a>
+        </li>
+
+        <li>
+            <a href="../changepass.html">
+                Change Password
+            </a>
+        </li>
+
+        <li>
+            <a href="../contactus.html">
+                Contact Us
+            </a>
+        </li>
+
+    </ul>
+
+
+    <hr>
+
+
+
+    <!-- =========================================
+         ORIGINAL WHY CHOOSE STUDENT HUB
+    ========================================== -->
+
+    <h2>Why Choose Student Hub?</h2>
+
+    <p>
+
+        Student Hub is designed to simplify student life
+        by bringing all academic services together in one
+        place. Whether you want to check your attendance,
+        view examination results, download study materials,
+        submit assignments, or stay updated with the latest
+        notices, Student Hub provides quick and secure
+        access to all essential academic resources.
+
+    </p>
+
+
+    <ul>
+
+        <li>✔ Secure Student Login</li>
+
+        <li>✔ Fast and Easy Access</li>
+
+        <li>✔ Centralized Academic Information</li>
+
+        <li>✔ User-Friendly Interface</li>
+
+        <li>✔ Anytime, Anywhere Access</li>
+
+        <li>✔ Organized Student Records</li>
+
+    </ul>
+
+
+    <hr>
+
+
+
+    <!-- =========================================
+         ORIGINAL SERVICES
+    ========================================== -->
+
+    <h2>Our Services</h2>
+
+
+    <table border="1" cellpadding="10">
+
+        <tr>
+
+            <th>Service</th>
+
+            <th>Description</th>
+
+        </tr>
+
+
+        <tr>
+
+            <td>Dashboard</td>
+
+            <td>
+                Provides a quick overview of all academic
+                activities.
+            </td>
+
+        </tr>
+
+
+        <tr>
+
+            <td>Attendance</td>
+
+            <td>
+                View your subject-wise attendance percentage.
+            </td>
+
+        </tr>
+
+
+        <tr>
+
+            <td>Results</td>
+
+            <td>
+                Check semester examination results and grades.
+            </td>
+
+        </tr>
+
+
+        <tr>
+
+            <td>Assignments</td>
+
+            <td>
+                View and track assignment submissions.
+            </td>
+
+        </tr>
+
+
+        <tr>
+
+            <td>Study Material</td>
+
+            <td>
+                Download notes, presentations, and learning
+                resources.
+            </td>
+
+        </tr>
+
+
+        <tr>
+
+            <td>Timetable</td>
+
+            <td>
+                View your weekly class schedule.
+            </td>
+
+        </tr>
+
+
+        <tr>
+
+            <td>Notices</td>
+
+            <td>
+                Read important college announcements.
+            </td>
+
+        </tr>
+
+    </table>
+
+
+    <hr>
+
+
+
+
+
+
+    <!-- =========================================
+         ORIGINAL ABOUT SECTION
+    ========================================== -->
+
+    <h2>About Student Hub</h2>
+
+    <p>
+
+        Student Hub is a web-based academic management
+        system developed to improve communication between
+        students and educational institutions. The portal
+        provides quick access to attendance, examination
+        results, assignments, notices, study materials,
+        timetables, and student profiles through a single
+        secure login.
+
+    </p>
+
+
+    <a href="../aboutus.html">
+        Read More
+    </a>
+
+
+    <hr>
+
+
+
+    <!-- =========================================
+         PRACTICAL 4 - COLLAPSIBLE FAQ
+    ========================================== -->
+
+    <h2>Frequently Asked Questions</h2>
+
+
+    <button
+        class="faqQuestion"
+        aria-expanded="false">
+
+        What is Student Hub?
+
+    </button>
+
+
+    <div class="faqAnswer">
+
+        <p>
+
+            Student Hub is a centralized academic portal
+            that gives students access to their academic
+            information and services from one platform.
+
+        </p>
+
+    </div>
+
+
+
+    <button
+        class="faqQuestion"
+        aria-expanded="false">
+
+        How can I check my attendance?
+
+    </button>
+
+
+    <div class="faqAnswer">
+
+        <p>
+
+            Open the Attendance page from Student Hub
+            to view your subject-wise attendance information.
+
+        </p>
+
+    </div>
+
+
+
+    <button
+        class="faqQuestion"
+        aria-expanded="false">
+
+        Where can I check my results?
+
+    </button>
+
+
+    <div class="faqAnswer">
+
+        <p>
+
+            Open the Results page to view your
+            examination results and grades.
+
+        </p>
+
+    </div>
+
+
+
+    <button
+        class="faqQuestion"
+        aria-expanded="false">
+
+        How can I contact support?
+
+    </button>
+
+
+    <div class="faqAnswer">
+
+        <p>
+
+            Visit the Contact Us page to find support
+            information and contact details.
+
+        </p>
+
+    </div>
+
+
+    <hr>
+
+
+
+    <!-- =========================================
+         ORIGINAL SUPPORT SECTION
+    ========================================== -->
+
+    <h2>Need Assistance?</h2>
+
+    <p>
+
+        If you have any questions, experience technical
+        issues, or require assistance while using Student
+        Hub, our support team is always available to help.
+
+    </p>
+
+
+    <a href="../contactus.html">
+        Contact Support
+    </a>
+
+
+    <hr>
+
+
+
+    <!-- =========================================
+         ORIGINAL FOOTER
+    ========================================== -->
+
+    <center>
+
+        <p>
+
+            <b>Student Hub</b><br>
+
+            Learn Better • Stay Organized • Achieve Success
+
+        </p>
+
+    </center>
+
+
+
+    <!-- =========================================
+         COMMON PRACTICAL 4 JAVASCRIPT
+         
+         Your common file is scriptc.js
+         and it is in the SAME folder as home.html
+    ========================================== -->
+
+    <script src="../scriptc.js"></script>
+
+
+</body>
+
+</html>

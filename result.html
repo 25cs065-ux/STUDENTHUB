@@ -5,11 +5,166 @@
 
     <title>Results - Student Hub</title>
 
+    <style>
+
+        /* =========================================
+           STUDENTHUB NAVIGATION
+        ========================================= */
+
+        #studentNavigation {
+            text-align: center;
+            padding: 15px;
+            border-bottom: 1px solid #ccc;
+        }
+
+        #menuButton,
+        #themeButton {
+            padding: 8px 12px;
+            margin: 5px;
+            cursor: pointer;
+            border: 1px solid #777;
+            background: white;
+        }
+
+        #navMenu {
+            margin-top: 12px;
+        }
+
+        #navMenu a {
+            margin: 8px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+
+        /* =========================================
+           MODAL
+        ========================================= */
+
+        
+
+        /* =========================================
+           DARK MODE
+        ========================================= */
+
+        body.darkMode {
+            background: #121212;
+            color: #f1f1f1;
+        }
+
+        body.darkMode a {
+            color: #8ab4f8;
+        }
+
+        body.darkMode #studentNavigation {
+            background: #1e1e1e;
+            border-color: #444;
+        }
+
+        body.darkMode #navMenu {
+            background: #1e1e1e;
+        }
+
+        body.darkMode table {
+            border-color: #777;
+        }
+
+        body.darkMode #modalBox {
+            background: #222;
+            color: white;
+        }
+
+    </style>
+
 </head>
+
 
 <body>
 
-    <!-- Header -->
+
+    <!-- =========================================
+         STUDENTHUB NAVIGATION
+    ========================================== -->
+
+    <div id="studentNavigation">
+
+        <button
+            id="menuButton"
+            aria-expanded="false"
+            aria-controls="navMenu">
+
+            ☰ Menu
+
+        </button>
+
+
+        <button
+            id="themeButton"
+            aria-label="Toggle dark and light mode">
+
+            🌙 Dark Mode
+
+        </button>
+
+
+        <nav id="navMenu" hidden>
+
+            <a href="Flexbox/home.html">
+                Home
+            </a>
+
+            <a href="aboutus.html">
+                About Us
+            </a>
+
+            <a href="dashboard.html">
+                Dashboard
+            </a>
+
+            <a href="attendance.html">
+                Attendance
+            </a>
+
+            <a href="result.html">
+                Results
+            </a>
+
+            <a href="timetable.html">
+                Timetable
+            </a>
+
+            <a href="assignment.html">
+                Assignments
+            </a>
+
+            <a href="studymaterial.html">
+                Study Material
+            </a>
+
+            <a href="notice.html">
+                Notices
+            </a>
+
+            <a href="profile.html">
+                Profile
+            </a>
+
+            <a href="changepass.html">
+                Change Password
+            </a>
+
+            <a href="contactus.html">
+                Contact Us
+            </a>
+
+        </nav>
+
+    </div>
+
+
+    <!-- =========================================
+         ORIGINAL HEADER
+    ========================================== -->
 
     <table width="100%">
 
@@ -17,13 +172,19 @@
 
             <td>
 
-                <img src="logo.png" width="120" alt="Student Hub Logo">
+                <img
+                    src="logo.png"
+                    width="120"
+                    alt="Student Hub Logo">
 
             </td>
 
+
             <td align="right">
 
-                <a href="home.html">Home</a>
+                <a href="Flexbox/home.html">
+                    Home
+                </a>
 
             </td>
 
@@ -31,7 +192,13 @@
 
     </table>
 
+
     <hr>
+
+
+    <!-- =========================================
+         PAGE TITLE
+    ========================================== -->
 
     <center>
 
@@ -39,13 +206,18 @@
 
         <p>
 
-            <b>View your academic performance and examination results.</b>
+            <b>
+                View your academic performance and
+                examination results.
+            </b>
 
         </p>
 
     </center>
 
+
     <hr>
+
 
     <h2>Result Overview</h2>
 
@@ -60,7 +232,9 @@
 
     </p>
 
+
     <hr>
+
 
     <h2>Student Information</h2>
 
@@ -103,7 +277,9 @@
 
     </table>
 
+
     <hr>
+
 
     <h2>Subject-wise Results</h2>
 
@@ -181,7 +357,9 @@
 
     </table>
 
+
     <hr>
+
 
     <h2>Performance Summary</h2>
 
@@ -253,7 +431,9 @@
 
     </table>
 
+
     <hr>
+
 
     <h2>Grade Scale</h2>
 
@@ -309,25 +489,109 @@
 
     </table>
 
+
     <hr>
+
 
     <h2>Important Instructions</h2>
 
     <ul>
 
-        <li>Verify all subject grades carefully.</li>
+        <li>
+            Verify all subject grades carefully.
+        </li>
 
-        <li>Report any discrepancies to the Examination Cell immediately.</li>
+        <li>
+            Report any discrepancies to the Examination Cell immediately.
+        </li>
 
-        <li>Keep a copy of your result for future reference.</li>
+        <li>
+            Keep a copy of your result for future reference.
+        </li>
 
-        <li>Students with backlogs should follow the university guidelines for re-examinations.</li>
+        <li>
+            Students with backlogs should follow the university guidelines
+            for re-examinations.
+        </li>
 
-        <li>Official mark sheets will be issued by the institution separately.</li>
+        <li>
+            Official mark sheets will be issued by the institution separately.
+        </li>
 
     </ul>
 
+
+    <!-- =========================================
+         PRACTICAL 4 - MODAL BUTTON
+    ========================================== -->
+
+    <center>
+
+        <button id="openModal">
+
+            View Result Instructions
+
+        </button>
+
+    </center>
+
+
+    <!-- =========================================
+         PRACTICAL 4 - MODAL
+    ========================================== -->
+
+    <div id="modal" hidden>
+
+        <div
+            id="modalBox"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="modalTitle">
+
+            <button
+                id="closeModal"
+                aria-label="Close result instructions">
+
+                ×
+
+            </button>
+
+
+            <h2 id="modalTitle">
+                Result Instructions
+            </h2>
+
+
+            <p>
+
+                Please verify your marks, grades, SGPA,
+                CGPA and overall result carefully.
+
+            </p>
+
+
+            <p>
+
+                If you find any discrepancy, contact the
+                Examination Department immediately.
+
+            </p>
+
+
+            <p>
+
+                Keep a copy of the result for future
+                reference.
+
+            </p>
+
+        </div>
+
+    </div>
+
+
     <hr>
+
 
     <h2>Need Help?</h2>
 
@@ -339,13 +603,23 @@
 
     </p>
 
-    <a href="contactus.html">Contact Support</a>
 
-    <br><br>
+    <a href="contactus.html">
+        Contact Support
+    </a>
 
-    <a href="home.html">Back to Home</a>
+
+    <br>
+    <br>
+
+
+    <a href="Flexbox/home.html">
+        Back to Home
+    </a>
+
 
     <hr>
+
 
     <center>
 
@@ -358,6 +632,14 @@
         </p>
 
     </center>
+
+
+    <!-- =========================================
+         COMMON PRACTICAL 4 JAVASCRIPT
+    ========================================== -->
+
+    <script src="scriptc.js"></script>
+
 
 </body>
 
